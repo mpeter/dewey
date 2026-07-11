@@ -82,7 +82,7 @@ func NewVertexSynthesizer(project, region, model string) (*VertexSynthesizer, er
 		region:  region,
 		model:   model,
 		client: &http.Client{
-			Timeout: 120 * time.Second, // Match OllamaSynthesizer timeout.
+			Timeout: 300 * time.Second, // increased from 120s — large curation prompts (36K+ tokens) need ~120-180s
 		},
 		checkExpiry: 30 * time.Second,
 	}
@@ -116,7 +116,7 @@ func (v *VertexSynthesizer) defaultGetToken(ctx context.Context) (string, error)
 func (v *VertexSynthesizer) Synthesize(ctx context.Context, prompt string) (string, error) {
 	reqBody := vertexSynthRequest{
 		AnthropicVersion: "vertex-2023-10-16",
-		MaxTokens:        4096,
+		MaxTokens:        16000, // increased from 4096 — curation extractions routinely exceed 4K tokens
 		Messages: []vertexMessage{
 			{Role: "user", Content: prompt},
 		},

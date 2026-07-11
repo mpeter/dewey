@@ -272,6 +272,8 @@ func (p *Pipeline) BuildExtractionPrompt(documents []DocumentContent) string {
 	var sb strings.Builder
 
 	sb.WriteString("You are a knowledge curator. Analyze the following documents and extract key knowledge.\n\n")
+	sb.WriteString("IMPORTANT: Be concise. Extract only the most significant and non-obvious knowledge items.\n")
+	sb.WriteString("Aim for 3-8 items per document maximum. Skip obvious or generic facts.\n\n")
 	sb.WriteString("For each piece of knowledge, classify it as one of:\n")
 	sb.WriteString("- **decision**: An explicit choice or agreement made\n")
 	sb.WriteString("- **pattern**: An approach, technique, or practice that worked\n")
@@ -282,28 +284,10 @@ func (p *Pipeline) BuildExtractionPrompt(documents []DocumentContent) string {
 	sb.WriteString("For each extracted item, provide:\n")
 	sb.WriteString("1. **tag**: A topic identifier (1-3 words, kebab-case, lowercase)\n")
 	sb.WriteString("2. **category**: One of decision/pattern/gotcha/context/reference\n")
-	sb.WriteString("3. **confidence**: One of:\n")
-	sb.WriteString("   - high: Explicit statement, no contradictions, multiple sources agree\n")
-	sb.WriteString("   - medium: Explicit but single-source\n")
-	sb.WriteString("   - low: Implied or contradictions exist\n")
-	sb.WriteString("   - flagged: Missing critical info or unresolvable contradictions\n")
-	sb.WriteString("4. **quality_flags**: Array of quality issues (may be empty). Each flag has:\n")
-	sb.WriteString("   - type: missing_rationale | implied_assumption | incongruent | unsupported_claim\n")
-	sb.WriteString("   - detail: Description of the issue\n")
-	sb.WriteString("   - sources: Source documents involved (optional)\n")
-	sb.WriteString("   - resolution: Suggested resolution (optional)\n")
-	sb.WriteString("5. **sources**: Array of source references. Each has:\n")
-	sb.WriteString("   - source_id: The source identifier\n")
-	sb.WriteString("   - document: The document name\n")
-	sb.WriteString("   - excerpt: Relevant text from the document\n")
-	sb.WriteString("6. **content**: The extracted knowledge as a clear, factual statement\n\n")
-
-	sb.WriteString("Quality analysis rules:\n")
-	sb.WriteString("- Flag 'missing_rationale' for decisions without explanation of why\n")
-	sb.WriteString("- Flag 'implied_assumption' for unstated assumptions\n")
-	sb.WriteString("- Flag 'incongruent' for contradictions between sources (include both source refs)\n")
-	sb.WriteString("- Flag 'unsupported_claim' for facts without evidence\n")
-	sb.WriteString("- For contradictions, prefer the newer source (temporal resolution)\n\n")
+	sb.WriteString("3. **confidence**: One of high/medium/low/flagged\n")
+	sb.WriteString("4. **quality_flags**: Empty array [] unless there is a clear contradiction\n")
+	sb.WriteString("5. **sources**: ONE source reference only (most relevant). Each has source_id, document, and a SHORT excerpt (max 20 words)\n")
+	sb.WriteString("6. **content**: The extracted knowledge as ONE clear sentence (max 30 words)\n\n")
 
 	sb.WriteString("Return a JSON array of objects. Example:\n")
 	sb.WriteString("```json\n")
@@ -351,9 +335,42 @@ func ParseExtractionResponse(response string) ([]KnowledgeFile, error) {
 	}
 	cleaned = strings.TrimSpace(cleaned)
 
-	var files []KnowledgeFile
-	if err := json.Unmarshal([]byte(cleaned), &files); err != nil {
+	// Parse into a raw intermediate to tolerate quality_flags being a string
+	// instead of an array (LLMs sometimes output "[]" or "none" as strings).
+	var rawFiles []json.RawMessage
+	if err := json.Unmarshal([]byte(cleaned), &rawFiles); err != nil {
 		return nil, fmt.Errorf("parse LLM response as JSON array: %w", err)
+	}
+
+	var files []KnowledgeFile
+	for _, raw := range rawFiles {
+		// Try direct unmarshal first.
+		var f KnowledgeFile
+		if err := json.Unmarshal(raw, &f); err != nil {
+			// quality_flags may be a string — normalise and retry.
+			normalised := strings.ReplaceAll(string(raw), `"quality_flags":`, `"quality_flags_raw":`)
+			var tmp struct {
+				Tag          string          `json:"tag"`
+				Category     string          `json:"category"`
+				Confidence   string          `json:"confidence"`
+				QualityFlags json.RawMessage `json:"quality_flags_raw"`
+				Sources      []SourceRef     `json:"sources"`
+				Content      string          `json:"content"`
+			}
+			if err2 := json.Unmarshal([]byte(normalised), &tmp); err2 != nil {
+				curateLogger.Warn("skipping unparseable knowledge item", "err", err2)
+				continue
+			}
+			f = KnowledgeFile{
+				Tag:        tmp.Tag,
+				Category:   tmp.Category,
+				Confidence: tmp.Confidence,
+				Sources:    tmp.Sources,
+				Content:    tmp.Content,
+				// quality_flags: leave empty (string values are discarded)
+			}
+		}
+		files = append(files, f)
 	}
 
 	// Validate required fields.
