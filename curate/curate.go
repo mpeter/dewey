@@ -347,27 +347,24 @@ func ParseExtractionResponse(response string) ([]KnowledgeFile, error) {
 		// Try direct unmarshal first.
 		var f KnowledgeFile
 		if err := json.Unmarshal(raw, &f); err != nil {
-			// quality_flags may be a string — normalise and retry.
-			normalised := strings.ReplaceAll(string(raw), `"quality_flags":`, `"quality_flags_raw":`)
-			var tmp struct {
-				Tag          string          `json:"tag"`
-				Category     string          `json:"category"`
-				Confidence   string          `json:"confidence"`
-				QualityFlags json.RawMessage `json:"quality_flags_raw"`
-				Sources      []SourceRef     `json:"sources"`
-				Content      string          `json:"content"`
-			}
-			if err2 := json.Unmarshal([]byte(normalised), &tmp); err2 != nil {
+			// quality_flags may be a string (e.g. "none") instead of an
+			// array — some LLMs emit this. Drop the field and retry so
+			// the rest of the item still parses; empty quality_flags is
+			// an acceptable fallback for a value we can't model.
+			var fields map[string]json.RawMessage
+			if err2 := json.Unmarshal(raw, &fields); err2 != nil {
 				curateLogger.Warn("skipping unparseable knowledge item", "err", err2)
 				continue
 			}
-			f = KnowledgeFile{
-				Tag:        tmp.Tag,
-				Category:   tmp.Category,
-				Confidence: tmp.Confidence,
-				Sources:    tmp.Sources,
-				Content:    tmp.Content,
-				// quality_flags: leave empty (string values are discarded)
+			delete(fields, "quality_flags")
+			retry, err2 := json.Marshal(fields)
+			if err2 != nil {
+				curateLogger.Warn("skipping unparseable knowledge item", "err", err2)
+				continue
+			}
+			if err2 := json.Unmarshal(retry, &f); err2 != nil {
+				curateLogger.Warn("skipping unparseable knowledge item", "err", err2)
+				continue
 			}
 		}
 		files = append(files, f)
