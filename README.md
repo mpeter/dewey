@@ -163,6 +163,16 @@ brew install --cask unbound-force/tap/dewey
 
 The cask includes a signed and notarized binary. Ollama is installed automatically as a dependency.
 
+### RPM (Fedora, RHEL, CentOS)
+
+Download the `.rpm` package from the [Releases page](https://github.com/unbound-force/dewey/releases) and install with `dnf`:
+
+```bash
+sudo dnf install ./dewey_<version>_linux_amd64.rpm
+```
+
+RPM packages are available for both `amd64` and `arm64` architectures. The binary installs to `/usr/bin/dewey`.
+
 ### go install (all platforms)
 
 ```bash
