@@ -445,6 +445,8 @@ dewey curate [--vault PATH] [--store NAME] [--force] [--no-embeddings]
 - `--force` — Run full curation instead of incremental (re-process all documents)
 - `--no-embeddings` — Skip embedding generation for curated files
 
+Curation has no batching or throttle: a store with no prior checkpoint sends every one of its indexed documents to the synthesizer in a single extraction call. For a large store, back it up one at a time (`--store NAME`) before enabling `curate_on_index` or a short `curation_interval`, so the first run doesn't dump the whole corpus on the LLM at once.
+
 ## Content Sources
 
 Dewey indexes content from four pluggable source types. Configure them in `.uf/dewey/sources.yaml`:

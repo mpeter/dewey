@@ -450,6 +450,8 @@ Learnings stored via `store_learning` are dual-written to both SQLite and markdo
 
 During `dewey serve`, a background goroutine periodically checks for new indexed content and curates incrementally. The curation interval is configurable per store. Background curation shares a mutex with indexing to prevent concurrent operations.
 
+`curateStoreInternal` builds one extraction prompt from every document a store's sources load and sends it as a single `Synthesize` call — there is no batch-size limit. A store with no checkpoint (first run, or `--force`) curates its entire corpus in one shot. Enabling `curate_on_index: true` on several large, never-curated stores at once, or on a frequently-restarted `dewey serve`, can send an outsized prompt to the synthesizer. Backfill large stores individually with `dewey curate --store NAME` before turning on `curate_on_index` or a short `curation_interval`.
+
 ## Coding Conventions
 
 - **Formatting**: `gofmt` and `goimports` (enforced by golangci-lint via MegaLinter).
