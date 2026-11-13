@@ -1,10 +1,11 @@
 # Documentation Accuracy Spec
 
-## ADDED Requirements
+## Purpose
 
-_None_
+Keep contributor documentation consistent with Dewey's implemented commands,
+configuration defaults and completed specification status.
 
-## MODIFIED Requirements
+## Requirements
 
 ### Requirement: README Environment Variables Accuracy
 
@@ -41,7 +42,3 @@ Completed spec artifacts MUST have their status field updated to "Complete" when
 - **GIVEN** spec 004 has all tasks completed and changes merged
 - **WHEN** the spec.md status field is read
 - **THEN** it MUST say "Complete" (not "Draft")
-
-## REMOVED Requirements
-
-_None_
