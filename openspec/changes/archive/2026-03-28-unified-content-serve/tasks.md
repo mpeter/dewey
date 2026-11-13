@@ -1,6 +1,6 @@
 # Tasks: Unified Content Serve
 
-**Input**: Design documents from `/specs/004-unified-content-serve/`
+**Input**: Design documents from `/openspec/changes/archive/2026-03-28-unified-content-serve/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
 **Tests**: Test tasks are included because the constitution (Principle IV) requires contract-level tests for all new exported functions, and the Verification Strategy specifies unit, integration, and regression test categories.
@@ -248,3 +248,11 @@ Task: "Add write guard to RenamePage()"            # T034 [P]
 - FR-012 (WAL mode) requires no tasks — already enabled per research R1
 - Each user story should be independently testable at its checkpoint
 - Commit after each task or logical group
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-03-28).
+- Merged PR: https://github.com/unbound-force/dewey/pull/14 (merged 2026-03-28T18:43:11Z; merge SHA `89244b0d36268ede164be939d19af4147da98435`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

@@ -34,4 +34,4 @@
 - The Assumptions section mentions SQLite WAL mode and `vault.Client` maps — these document the existing system constraints the spec must work within, not implementation prescriptions.
 - FR-006 references spec 011's mutex — this is a dependency on an existing feature, not an implementation detail.
 - FR-009 (file watcher after indexing) is a timing constraint derived from the edge case analysis, not an implementation prescription.
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

@@ -34,4 +34,4 @@
 - FR-009 explicitly scopes reindex to external sources only — local vault and learnings are preserved. This is a critical safety constraint.
 - FR-005 (mutual exclusion) prevents race conditions from concurrent index/reindex calls.
 - The Assumptions section mentions `source.Manager` and `store.DeletePagesBySource()` — these are existing project domain concepts, not implementation prescriptions.
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

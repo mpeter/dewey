@@ -1,6 +1,6 @@
 # Tasks: Unified Ignore Support
 
-**Input**: Design documents from `/specs/006-unified-ignore/`
+**Input**: Design documents from `/openspec/changes/archive/2026-03-30-unified-ignore/`
 **Prerequisites**: plan.md ✓, spec.md ✓, research.md ✓, quickstart.md ✓, contracts/matcher.go ✓
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -175,3 +175,11 @@
 - `walkVault()` is a package-level function, not a method — signature change propagates to `IncrementalIndex()` caller (quickstart.md gotcha #1)
 - Hidden-directory skipping is hardcoded in `Matcher` as a baseline — it cannot be overridden by patterns
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-03-30).
+- Merged PR: https://github.com/unbound-force/dewey/pull/22 (merged 2026-03-30T19:54:37Z; merge SHA `3d84bb87986b86e51b2ac293e6d162a004a5002d`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

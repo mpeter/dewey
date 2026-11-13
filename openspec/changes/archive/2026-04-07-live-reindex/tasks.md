@@ -1,6 +1,6 @@
 # Tasks: Live Reindex
 
-**Input**: Design documents from `/specs/011-live-reindex/`
+**Input**: Design documents from `/openspec/changes/archive/2026-04-07-live-reindex/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -175,3 +175,11 @@ Phase 7:            T013 (depends on all)
 - Read-only mode excludes indexing tools entirely — no test count changes needed for read-only test cases.
 - All test cases use in-memory SQLite (`:memory:`) and standard library `testing` — no external assertion libraries per AGENTS.md testing conventions.
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-07).
+- Merged PR: https://github.com/unbound-force/dewey/pull/35 (merged 2026-04-07T14:47:48Z; merge SHA `e94beef7caef77158aabe54ab8099dc3f20e9439`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

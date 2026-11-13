@@ -1,6 +1,6 @@
 # Tasks: Doctor Emoji Markers
 
-**Input**: Design documents from `specs/005-doctor-emoji-markers/`
+**Input**: Design documents from `openspec/changes/archive/2026-03-30-doctor-emoji-markers/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -54,3 +54,11 @@ T001 and T002 both modify `cli.go` but at different line ranges (~30 lines apart
 - The summary box already uses emoji — no change needed (FR-007)
 - The `printCheck()` method signature is unchanged (FR-009)
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-03-30).
+- Merged PR: https://github.com/unbound-force/dewey/pull/21 (merged 2026-03-30T13:01:19Z; merge SHA `ee8b12d4ddd8db2f4ce2d590c3f08c5b49a6efbe`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

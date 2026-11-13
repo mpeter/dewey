@@ -37,4 +37,4 @@
 - The quality analysis dimensions (missing/implied/incongruent) were added per org discussion #114 comment thread.
 - The `curated` trust tier is a new allowed value in the existing `tier` column — no schema migration needed beyond what spec 013 already added.
 - All design decisions were confirmed by the user in the exploration session before spec creation.
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

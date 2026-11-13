@@ -1,6 +1,6 @@
 # Tasks: Store Learning MCP Tool
 
-**Input**: Design documents from `/specs/008-store-learning/`
+**Input**: Design documents from `/openspec/changes/archive/2026-04-03-store-learning/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -105,3 +105,11 @@ All six tests touch the same file (`tools/learning_test.go`) but are independent
 
 US2 requires no dedicated implementation task because learnings use `source_id = "learning"` which is not a configured source — `dewey reindex` never deletes them (R7). Persistence is inherent to the SQLite store.
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-03).
+- Merged PR: https://github.com/unbound-force/dewey/pull/27 (merged 2026-04-03T21:18:57Z; merge SHA `b6ac23efae13971ff61e2a07d8c17bbf6f5f41f5`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

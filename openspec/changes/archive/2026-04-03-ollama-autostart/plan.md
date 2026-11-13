@@ -1,7 +1,7 @@
 # Implementation Plan: Ollama Auto-Start
 
 **Branch**: `007-ollama-autostart` | **Date**: 2026-04-03 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/007-ollama-autostart/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-04-03-ollama-autostart/spec.md`
 
 ## Summary
 
@@ -41,11 +41,11 @@ The implementation is ~100 lines of Go in `main.go` plus tests, using an Ollama 
 ### Documentation (this feature)
 
 ```text
-specs/007-ollama-autostart/
+openspec/changes/archive/2026-04-03-ollama-autostart/
 ├── plan.md              # This file
 ├── research.md          # Phase 0: codebase analysis and design decisions
 ├── quickstart.md        # Phase 1: implementation guide
-└── tasks.md             # Phase 2 output (/speckit.tasks command)
+└── tasks.md             # Phase 2 output (historical tasks step command)
 ```
 
 ### Source Code (repository root)

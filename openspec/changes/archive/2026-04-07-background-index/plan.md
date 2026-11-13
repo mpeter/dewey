@@ -1,7 +1,7 @@
 # Implementation Plan: Background Index
 
 **Branch**: `012-background-index` | **Date**: 2026-04-07 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/012-background-index/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-04-07-background-index/spec.md`
 
 ## Summary
 
@@ -51,12 +51,12 @@ All new code is testable in isolation:
 ### Documentation (this feature)
 
 ```text
-specs/012-background-index/
+openspec/changes/archive/2026-04-07-background-index/
 ├── plan.md              # This file
 ├── spec.md              # Feature specification
 ├── research.md          # Phase 0 research findings
 ├── quickstart.md        # Phase 1 architecture and design decisions
-└── tasks.md             # Phase 2 task breakdown (created by /speckit.tasks)
+└── tasks.md             # Phase 2 task breakdown (created by historical tasks step)
 ```
 
 ### Source Code (files modified)

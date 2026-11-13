@@ -34,4 +34,4 @@
 - FR-001 through FR-005 directly map to the requirements in GitHub issue #25 (Spec 021 FR-007–FR-011).
 - FR-006 through FR-010 are additions for error handling, persistence, graceful degradation, and tool registration.
 - The Assumptions section references "pages" and "blocks" which are Dewey domain concepts (not implementation details) — they describe the existing data model the tool integrates with.
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

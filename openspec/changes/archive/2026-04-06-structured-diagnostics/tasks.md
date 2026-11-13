@@ -1,6 +1,6 @@
 # Tasks: Structured Diagnostics
 
-**Input**: Design documents from `specs/009-structured-diagnostics/`
+**Input**: Design documents from `openspec/changes/archive/2026-04-06-structured-diagnostics/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -143,3 +143,11 @@ Phases 2, 3, 4 can run in parallel after Phase 1 completes (they touch different
 
 This delivers timestamp-based startup diagnosis without lock PID or silent skip features.
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-06).
+- Merged PR: https://github.com/unbound-force/dewey/pull/30 (merged 2026-04-06T17:55:09Z; merge SHA `b70f803274e642cd9e9e330559612bc8546e04f0`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

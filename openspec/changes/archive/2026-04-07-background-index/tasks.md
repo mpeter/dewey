@@ -1,6 +1,6 @@
 # Tasks: Background Index
 
-**Input**: Design documents from `/specs/012-background-index/`
+**Input**: Design documents from `/openspec/changes/archive/2026-04-07-background-index/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 
 **Organization**: Tasks are grouped into four phases: infrastructure changes to `server.go` and `tools/indexing.go`, core restructure of `executeServe()` and `initObsidianBackend()` in `main.go`, tests across both files, and CI verification.
@@ -122,3 +122,11 @@ Phase 3: T006 ──┐
 - **US2 (Indexing Status Visibility)**: T001, T005
 - **US3 (Mutual Exclusion with Live Reindex)**: T002, T007
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-07).
+- Merged PR: https://github.com/unbound-force/dewey/pull/38 (merged 2026-04-07T19:04:04Z; merge SHA `c22706955f3c2e92713a449eb81ef6bbe767e05d`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

@@ -33,4 +33,4 @@
 
 - The Assumptions section mentions Go time format and `time.Since()` — these are implementation hints for the planning phase, not prescriptive.
 - FR-004 references specific package names (`dewey/vault`, etc.) — these constrain the change surface, not the implementation approach.
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

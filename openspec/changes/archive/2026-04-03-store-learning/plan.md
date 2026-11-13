@@ -1,7 +1,7 @@
 # Implementation Plan: Store Learning MCP Tool
 
 **Branch**: `008-store-learning` | **Date**: 2026-04-03 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/008-store-learning/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-04-03-store-learning/spec.md`
 
 ## Summary
 
@@ -52,11 +52,11 @@ The tool implementation follows the existing `tools/semantic.go` pattern: depend
 ### Documentation (this feature)
 
 ```text
-specs/008-store-learning/
+openspec/changes/archive/2026-04-03-store-learning/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output
 ├── quickstart.md        # Phase 1 output
-└── tasks.md             # Phase 2 output (/speckit.tasks command)
+└── tasks.md             # Phase 2 output (historical tasks step command)
 ```
 
 ### Source Code (repository root)

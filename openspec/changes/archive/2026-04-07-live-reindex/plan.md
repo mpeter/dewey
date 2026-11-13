@@ -1,7 +1,7 @@
 # Implementation Plan: Live Reindex
 
 **Branch**: `011-live-reindex` | **Date**: 2026-04-07 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/011-live-reindex/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-04-07-live-reindex/spec.md`
 
 ## Summary
 
@@ -35,11 +35,11 @@ Add `index` and `reindex` MCP tools that allow AI agents and developers to trigg
 ### Documentation (this feature)
 
 ```text
-specs/011-live-reindex/
+openspec/changes/archive/2026-04-07-live-reindex/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output
 ├── quickstart.md        # Phase 1 output
-└── tasks.md             # Phase 2 output (/speckit.tasks)
+└── tasks.md             # Phase 2 output (historical tasks step)
 ```
 
 ### Source Code (repository root)

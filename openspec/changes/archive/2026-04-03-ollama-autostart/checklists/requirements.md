@@ -34,4 +34,4 @@
 - The Assumptions section mentions `os/exec.Command` and `SysProcAttr` — these are implementation hints for the planning phase, not prescriptive. The spec itself is technology-agnostic in its requirements.
 - FR-001 through FR-006 directly map to the requirements in GitHub issue #24 and Spec 021.
 - FR-007 through FR-010 are additions that emerged from edge case analysis (--no-embeddings flag, remote endpoints, doctor reporting, configurable timeout).
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

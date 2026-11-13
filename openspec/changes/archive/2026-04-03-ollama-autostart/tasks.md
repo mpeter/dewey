@@ -1,6 +1,6 @@
 # Tasks: Ollama Auto-Start
 
-**Input**: Design documents from `/specs/007-ollama-autostart/`
+**Input**: Design documents from `/openspec/changes/archive/2026-04-03-ollama-autostart/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -156,3 +156,11 @@ Phase 7: T020 → T021 (sequential, final gate)
 - The `--no-embeddings` bypass is automatic (existing `if noEmbeddings` branch in both `initObsidianBackend()` and `createIndexEmbedder()`)
 - `dewey doctor` uses `ensureOllama(autoStart=false)` — it reports state but never starts Ollama
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-03).
+- Merged PR: https://github.com/unbound-force/dewey/pull/26 (merged 2026-04-03T18:06:00Z; merge SHA `e0add7c86a3fe39e2695f8a970ed8ed6ffa97b54`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

@@ -1,7 +1,7 @@
 # Implementation Plan: Quality Ratchets
 
 **Branch**: `002-quality-ratchets` | **Date**: 2026-03-24 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/002-quality-ratchets/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-03-23-quality-ratchets/spec.md`
 
 ## Summary
 
@@ -97,7 +97,7 @@ Constitution §IV explicitly requires: "Coverage ratchets MUST be enforced by au
 ### Documentation (this feature)
 
 ```text
-specs/002-quality-ratchets/
+openspec/changes/archive/2026-03-23-quality-ratchets/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output (5 decisions documented)
 ├── spec.md              # Feature specification (3 user stories, 14 FRs, 7 SCs)

@@ -1,7 +1,7 @@
 # Implementation Plan: Curated Knowledge Stores
 
 **Branch**: `015-curated-knowledge-stores` | **Date**: 2026-04-21 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `specs/015-curated-knowledge-stores/spec.md`
+**Input**: Feature specification from `openspec/changes/archive/2026-04-22-curated-knowledge-stores/spec.md`
 
 ## Summary
 
@@ -60,7 +60,7 @@ Curated Knowledge Stores introduces three layers of knowledge management to Dewe
 ### Documentation (this feature)
 
 ```text
-specs/015-curated-knowledge-stores/
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output
 ├── quickstart.md        # Phase 1 output
@@ -68,7 +68,7 @@ specs/015-curated-knowledge-stores/
 │   ├── curate-package.md
 │   ├── mcp-tools.md
 │   └── cli-commands.md
-└── tasks.md             # Phase 2 output (/speckit.tasks)
+└── tasks.md             # Phase 2 output (historical tasks step)
 ```
 
 ### Source Code (repository root)

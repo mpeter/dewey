@@ -1,7 +1,7 @@
 # Implementation Plan: Knowledge Compilation & Temporal Intelligence
 
 **Branch**: `013-knowledge-compile` | **Date**: 2026-04-10 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/013-knowledge-compile/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-04-10-knowledge-compile/spec.md`
 
 ## Summary
 
@@ -52,7 +52,7 @@ All new packages are testable in isolation:
 ### Documentation (this feature)
 
 ```text
-specs/013-knowledge-compile/
+openspec/changes/archive/2026-04-10-knowledge-compile/
 ├── plan.md              # This file
 ├── research.md          # Phase 0: codebase analysis, design decisions
 ├── quickstart.md        # Phase 1: architecture overview, key decisions
@@ -65,7 +65,7 @@ specs/013-knowledge-compile/
 │   └── llm-interface.md     # LLM synthesis interface contract
 ├── checklists/
 │   └── requirements.md  # Requirement quality checklist
-└── tasks.md             # Phase 2 output (/speckit.tasks command)
+└── tasks.md             # Phase 2 output (historical tasks step command)
 ```
 
 ### Source Code (repository root)

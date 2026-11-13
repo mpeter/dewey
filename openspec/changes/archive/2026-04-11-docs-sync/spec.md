@@ -67,3 +67,11 @@ An AI agent reads AGENTS.md to understand the project. Today it has a stale `ser
 - This is a documentation-only change — no production code, no tests, no schema changes.
 - The README structure (sections, ordering) may be reorganized to accommodate new features. The existing content is the starting point, not a constraint.
 - AGENTS.md changes are minimal (3 targeted fixes) since it was partially updated during feature implementation.
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-11).
+- Merged PR: https://github.com/unbound-force/dewey/pull/45 (merged 2026-04-11T17:04:30Z; merge SHA `4d8316bd07e572dd71349273126b868926b6fd3a`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

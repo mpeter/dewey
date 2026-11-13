@@ -1,6 +1,6 @@
 # Tasks: Quality Ratchets
 
-**Input**: Design documents from `/specs/002-quality-ratchets/`
+**Input**: Design documents from `/openspec/changes/archive/2026-03-23-quality-ratchets/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md
 
 **Tests**: Tests are the primary deliverable of US2 and US3. New test files and assertion strengthening are the implementation, not an optional add-on.
@@ -125,7 +125,7 @@
 ### Verification
 
 - [x] T050 [US3] Run `go test -race -count=1 -coverprofile=coverage.out ./...` — all tests pass, no regressions
-- [ ] T051 [US3] Run `gaze crap --format=json --coverprofile=coverage.out ./...` — contract coverage 60.6% (target ≥80% NOT MET), GazeCRAPload 36 (target ≤10 NOT MET), Q4=5 (target 0 NOT MET). GoDoc + assertion strengthening moved needle but insufficient. Remaining Q3/Q4 functions need deeper assertion work or structural changes.
+- [ ] T051 [US3] Run `gaze crap --format=json --coverprofile=coverage.out ./...` — contract coverage 60.6% (target ≥80% NOT MET), GazeCRAPload 36 (target ≤10 NOT MET), Q4=5 (target 0 NOT MET). GoDoc + assertion strengthening moved needle but insufficient. Remaining Q3/Q4 functions need deeper assertion work or structural changes. (unverified: completion not independently established during migration)
 - [x] T052 [US3] Tighten CI thresholds to achieved values: --max-crapload=26 --max-gaze-crapload=36 --min-contract-coverage=60
 
 **Checkpoint**: Contract coverage improved to 60.6% (target ≥80% not yet met). GazeCRAPload at 36 (target ≤10 not yet met). Q4 functions remain at 5 (target 0 not yet met). CI ratchet tightened to achieved values. Further iteration required.
@@ -135,9 +135,9 @@
 ## Phase 5: Polish & Cross-Cutting Concerns
 
 - [x] T053 Run full `go build ./...`, `go test -race -count=1 ./...`, `go vet ./...` suite — all pass, clean build
-- [ ] T054 Run `gaze report` with final CI thresholds — BLOCKED: contract coverage target ≥80% not yet met (60.6% achieved)
+- [ ] T054 Run `gaze report` with final CI thresholds — BLOCKED: contract coverage target ≥80% not yet met (60.6% achieved) (unverified: completion not independently established during migration)
 - [x] T055 Verify all 40 MCP tools still function correctly — all 10 packages pass tests with -race, no regressions from decompositions
-- [x] T056 Update specs/002-quality-ratchets/tasks.md to mark all completed tasks with [x]
+- [x] T056 Update openspec/changes/archive/2026-03-23-quality-ratchets/tasks.md to mark all completed tasks with [x]
 
 **Checkpoint**: All quality targets met. CI enforces ratcheted thresholds. Ready for PR.
 
@@ -256,3 +256,12 @@ US1 is already complete. The ratchet mechanism is in place.
 - GazeCRAPload target is ≤10 (confirmed despite baseline change from 18 → 37)
 - Gaze threshold flags: `--max-crapload=N`, `--max-gaze-crapload=N`, `--min-contract-coverage=N`
 - Coverage reuse: generate `coverage.out` once with `go test`, pass to Gaze with `--coverprofile`
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-03-23).
+- Merged PR: https://github.com/unbound-force/dewey/pull/3 (merged 2026-03-23T20:07:38Z; merge SHA `883b7b4a9843693fb9307833b5759fa26d9e9238`).
+- Merged PR: https://github.com/unbound-force/dewey/pull/4 (merged 2026-03-26T12:39:10Z; merge SHA `502973dae70e1e67341755a3fca8c859377e1695`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

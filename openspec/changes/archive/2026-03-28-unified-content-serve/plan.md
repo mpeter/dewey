@@ -1,7 +1,7 @@
 # Implementation Plan: Unified Content Serve
 
 **Branch**: `004-unified-content-serve` | **Date**: 2026-03-28 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/004-unified-content-serve/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-03-28-unified-content-serve/spec.md`
 
 ## Summary
 
@@ -58,14 +58,14 @@ No changes to the 37 inherited MCP tool contracts. External pages are additive �
 ### Documentation (this feature)
 
 ```text
-specs/004-unified-content-serve/
+openspec/changes/archive/2026-03-28-unified-content-serve/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output
 ├── data-model.md        # Phase 1 output
 ├── quickstart.md        # Phase 1 output
 ├── contracts/           # Phase 1 output
 │   └── mcp-tools.md     # MCP tool contract changes
-└── tasks.md             # Phase 2 output (/speckit.tasks)
+└── tasks.md             # Phase 2 output (historical tasks step)
 ```
 
 ### Source Code (repository root)

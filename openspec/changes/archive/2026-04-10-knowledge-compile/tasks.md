@@ -1,6 +1,6 @@
 # Tasks: Knowledge Compilation & Temporal Intelligence
 
-**Input**: Design documents from `/specs/013-knowledge-compile/`
+**Input**: Design documents from `/openspec/changes/archive/2026-04-10-knowledge-compile/`
 **Prerequisites**: plan.md (required), spec.md (required), research.md, quickstart.md, contracts/ (6 contracts)
 
 **Spec**: 6 user stories, 28 functional requirements, 6 contracts
@@ -231,3 +231,11 @@ Phase 1 (Schema + Store)
 - Schema migration must be idempotent — running v1→v2 twice must not error
 - Backward compatibility: old `tags` parameter must still work via fallback logic
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-10).
+- Merged PR: https://github.com/unbound-force/dewey/pull/42 (merged 2026-04-10T21:17:02Z; merge SHA `0b41044accf2833a5c801f4932807ed27fcb9fc2`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

@@ -1,6 +1,6 @@
 # Tasks: Code Source Indexing & Manifest Generation
 
-**Input**: Design documents from `/specs/010-code-source-index/`
+**Input**: Design documents from `/openspec/changes/archive/2026-04-06-code-source-index/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md, contracts/
 
 **Tests**: Tests are included per spec requirement — the chunker package requires ≥80% coverage, code source ≥70%, and manifest command ≥70% (plan.md Coverage Strategy).
@@ -215,3 +215,11 @@ T010 and T011 can run in parallel (different concerns)
 - Test files use `t.TempDir()` for filesystem fixtures and Go source string literals for chunker input.
 - Commit after each task or logical group. Mark `- [x]` immediately upon completion.
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-06).
+- Merged PR: https://github.com/unbound-force/dewey/pull/32 (merged 2026-04-06T19:50:58Z; merge SHA `69051cdeb9482bca0f8af058890ab247c79563f5`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

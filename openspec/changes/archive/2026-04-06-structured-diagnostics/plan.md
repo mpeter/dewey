@@ -1,7 +1,7 @@
 # Implementation Plan: Structured Diagnostics
 
 **Branch**: `009-structured-diagnostics` | **Date**: 2026-04-06 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `specs/009-structured-diagnostics/spec.md`
+**Input**: Feature specification from `openspec/changes/archive/2026-04-06-structured-diagnostics/spec.md`
 
 ## Summary
 
@@ -51,11 +51,11 @@ All changes are testable in isolation:
 ### Documentation (this feature)
 
 ```text
-specs/009-structured-diagnostics/
+openspec/changes/archive/2026-04-06-structured-diagnostics/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 research findings
 ├── quickstart.md        # Phase 1 design summary
-└── tasks.md             # Phase 2 output (/speckit.tasks command)
+└── tasks.md             # Phase 2 output (historical tasks step command)
 ```
 
 ### Source Code (repository root)

@@ -31,7 +31,7 @@
 
 ## Notes
 
-- All items pass validation. Spec is ready for `/speckit.clarify` or `/speckit.plan`.
+- All items pass validation. Spec is ready for the historical clarify step or the historical plan step.
 - The spec references specific MCP tool names (e.g., `dewey_search`, `dewey_update_block`) -- these are product feature names, not implementation details. They describe the user-facing interface.
 - SC-006 ("no more than 2 seconds") is a performance threshold, not an implementation detail -- it describes the user experience constraint.
 - The spec contains implementation-adjacent references (SQLite WAL mode in FR-012, `sources.yaml` in FR-013, `[[wikilink]]` syntax in FR-002) intentionally, as these are user-facing technologies established in spec 001. WAL mode is referenced because it describes the concurrent access behavior users rely on.

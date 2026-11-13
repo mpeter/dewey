@@ -1,7 +1,7 @@
 # Implementation Plan: Code Source Indexing & Manifest Generation
 
 **Branch**: `010-code-source-index` | **Date**: 2026-04-06 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `specs/010-code-source-index/spec.md`
+**Input**: Feature specification from `openspec/changes/archive/2026-04-06-code-source-index/spec.md`
 
 ## Summary
 
@@ -50,7 +50,7 @@ Indexed code blocks include provenance metadata (source ID, source type "code", 
 ### Documentation (this feature)
 
 ```text
-specs/010-code-source-index/
+openspec/changes/archive/2026-04-06-code-source-index/
 ├── plan.md                          # This file
 ├── spec.md                          # Feature specification
 ├── research.md                      # Phase 0 research findings
@@ -62,7 +62,7 @@ specs/010-code-source-index/
 │   ├── config-validation.md         # Config validation for type: code
 │   └── manifest-command.md          # dewey manifest CLI command
 ├── checklists/                      # Requirement quality checklists
-└── tasks.md                         # Task breakdown (created by /speckit.tasks)
+└── tasks.md                         # Task breakdown (created by historical tasks step)
 ```
 
 ### Source Code (repository root)

@@ -1,7 +1,7 @@
 # Implementation Plan: Doctor Emoji Markers
 
 **Branch**: `005-doctor-emoji-markers` | **Date**: 2026-03-30 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `specs/005-doctor-emoji-markers/spec.md`
+**Input**: Feature specification from `openspec/changes/archive/2026-03-30-doctor-emoji-markers/spec.md`
 
 ## Summary
 
@@ -37,11 +37,11 @@ Replace `[PASS]`/`[WARN]`/`[FAIL]` text markers in `dewey doctor` check lines wi
 ### Documentation (this feature)
 
 ```text
-specs/005-doctor-emoji-markers/
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output (minimal — change is well-understood)
 ├── quickstart.md        # Phase 1 output (implementation guide)
-└── tasks.md             # Phase 2 output (/speckit.tasks command)
+└── tasks.md             # Phase 2 output (historical tasks step command)
 ```
 
 **Skipped artifacts**:

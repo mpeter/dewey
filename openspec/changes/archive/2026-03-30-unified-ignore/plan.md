@@ -1,7 +1,7 @@
 # Implementation Plan: Unified Ignore Support
 
 **Branch**: `006-unified-ignore` | **Date**: 2026-03-30 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/006-unified-ignore/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-03-30-unified-ignore/spec.md`
 
 ## Summary
 
@@ -46,13 +46,13 @@ The `ignore` package is fully testable in isolation with no external dependencie
 ### Documentation (this feature)
 
 ```text
-specs/006-unified-ignore/
+openspec/changes/archive/2026-03-30-unified-ignore/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output — technical findings
 ├── quickstart.md        # Phase 1 output — implementation guide
 ├── contracts/           # Phase 1 output — interface contracts
 │   └── matcher.go       # Matcher interface contract
-└── tasks.md             # Phase 2 output (/speckit.tasks)
+└── tasks.md             # Phase 2 output (historical tasks step)
 ```
 
 ### Source Code (repository root)

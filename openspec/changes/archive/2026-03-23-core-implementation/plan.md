@@ -1,7 +1,7 @@
 # Implementation Plan: Dewey Core Implementation
 
 **Branch**: `001-core-implementation` | **Date**: 2026-03-22 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/001-core-implementation/spec.md`
+**Input**: Feature specification from `/openspec/changes/archive/2026-03-23-core-implementation/spec.md`
 
 ## Summary
 
@@ -46,7 +46,7 @@ SQLite uses `modernc.org/sqlite` (pure Go, no external services). Embedding inte
 ### Documentation (this feature)
 
 ```text
-specs/001-core-implementation/
+openspec/changes/archive/2026-03-23-core-implementation/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output
 ├── data-model.md        # Phase 1 output
@@ -55,7 +55,7 @@ specs/001-core-implementation/
 │   └── cli-commands.md  # CLI command contracts
 ├── checklists/
 │   └── requirements.md  # Spec quality checklist
-└── tasks.md             # Phase 2 output (/speckit.tasks command)
+└── tasks.md             # Phase 2 output (historical tasks step command)
 ```
 
 ### Source Code (repository root)

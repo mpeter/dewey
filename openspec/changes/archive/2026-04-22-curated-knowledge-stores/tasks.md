@@ -1,6 +1,6 @@
 # Tasks: Curated Knowledge Stores
 
-**Input**: Design documents from `/specs/015-curated-knowledge-stores/`
+**Input**: Design documents from `/openspec/changes/archive/2026-04-22-curated-knowledge-stores/`
 **Prerequisites**: plan.md (required), spec.md (required), research.md, quickstart.md, contracts/curate-package.md, contracts/mcp-tools.md, contracts/cli-commands.md
 
 **Tests**: Included — this spec has 28 FRs across 8 user stories; tests are required per constitution (Observable Quality, Testability).
@@ -310,3 +310,11 @@ Phase 7: T039 → [T040, T041, T042] (parallel docs) → T043
 - File system tests use `t.TempDir()` — no external dependencies
 - Store tests use in-memory SQLite (`:memory:`) — no disk I/O
 <!-- spec-review: passed -->
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-04-22).
+- Merged PR: https://github.com/unbound-force/dewey/pull/51 (merged 2026-04-22T01:05:37Z; merge SHA `09fa99f23bc4e70dbbbc35a871026f2aa3ba54fd`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

@@ -34,4 +34,4 @@
 - The Assumptions section mentions `go/parser` and `go/ast` — these are standard library packages referenced as implementation context for the planning phase, not prescriptive.
 - FR-004 mentions Cobra and MCP tool patterns — these describe the domain patterns to extract, not implementation choices.
 - The spec covers both code source indexing (US1/US2) and manifest generation (US3) as a single feature because they share the language chunker infrastructure.
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

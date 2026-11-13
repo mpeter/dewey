@@ -37,4 +37,4 @@
 - FR-028 (deterministic output) is aspirational for LLM-based compilation — the intent is that the same learnings should produce semantically equivalent articles, not byte-identical ones.
 - SC-008 addresses backward compatibility — the API change from `tags` (plural) to `tag` (singular) needs a migration path for existing learnings.
 - Dependencies: Spec 008 (store_learning), Spec 011 (index/reindex tools), Spec 012 (background indexing mutex pattern).
-- All items pass. Spec is ready for `/speckit.plan` or `/unleash`.
+- All items pass. Spec is ready for the historical plan step or `/unleash`.

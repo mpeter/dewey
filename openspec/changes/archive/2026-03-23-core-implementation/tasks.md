@@ -1,6 +1,6 @@
 # Tasks: Dewey Core Implementation
 
-**Input**: Design documents from `/specs/001-core-implementation/`
+**Input**: Design documents from `/openspec/changes/archive/2026-03-23-core-implementation/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
 **Tests**: Tests are included for all new packages. The constitution (Principle IV: Testability) requires testable packages. Existing graphthulhu tests serve as the backward compatibility gate.
@@ -271,3 +271,12 @@ Task: "T057 [P] [US3] Write web crawl source tests in source/web_test.go"
 - The `dewey serve` command backward compatibility (FR-025) is verified by the existing test suite running after each story phase
 - Commit after each completed phase for clean git history
 - Stop at any checkpoint to validate the story independently
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-03-23).
+- Merged PR: https://github.com/unbound-force/dewey/pull/1 (merged 2026-03-23T01:14:50Z; merge SHA `86ec182a95b15cb069c29e3bdc97ec71dd7f541e`).
+- Merged PR: https://github.com/unbound-force/dewey/pull/2 (merged 2026-03-23T12:57:48Z; merge SHA `041e49f79ee6b188dece8ded6df39152627e3fd3`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

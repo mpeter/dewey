@@ -47,3 +47,11 @@ All tasks are implementation-complete. This document records the work done.
 - [x] AGENTS.md updated with provider configuration section
 - [x] GoDoc on all new exported types and functions
 - [x] Website issue filed: unbound-force/website#113
+
+## Migration Evidence
+
+- Migrated to the OpenSpec archive on 2026-11-13.
+- Archive date and metadata creation date use the original feature merge date (2026-05-08).
+- Merged PR: https://github.com/unbound-force/dewey/pull/56 (merged 2026-05-08T16:23:47Z; merge SHA `6c94aa7e5e9d65c1e7650d96f01a2d6d5c9efe66`).
+- A feature-level merge is not proof of completion of individual tasks. Original task checkbox states are preserved; unchecked tasks remain unverified.
+- These documents are historical artifacts, not active workflow instructions or current-schema validation targets.

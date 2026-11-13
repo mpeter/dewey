@@ -33,4 +33,4 @@
 
 - FR-009 references `doctorCounter` and `printCheck` by name — this is acceptable as it constrains the change surface for safety, not as an implementation prescription.
 - The spec mentions `runewidth.StringWidth` in Assumptions — this documents an existing constraint, not a new implementation choice.
-- All items pass. Spec is ready for `/speckit.clarify` or `/speckit.plan`.
+- All items pass. Spec is ready for the historical clarify step or the historical plan step.

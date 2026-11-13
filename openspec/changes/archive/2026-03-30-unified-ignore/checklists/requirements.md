@@ -34,4 +34,4 @@
 - FR-008 and FR-012 reference specific function names (`vault.Load()`, etc.) — this constrains the change surface rather than prescribing implementation.
 - SC-001 uses a 5-second target which is based on measured 1-second startup for the website vault when `node_modules/` is excluded (measured during exploration).
 - SC-003 references specific page counts (137 vs 443) from actual measurements of the `disk-website` source.
-- All items pass. Spec is ready for `/speckit.plan` or `/speckit.clarify`.
+- All items pass. Spec is ready for the historical plan step or the historical clarify step.
