@@ -25,8 +25,8 @@ Your job is to find where tests are shallow, brittle, or missing; where coverage
 Before reviewing, read:
 
 1. `AGENTS.md` — Testing Conventions, Coding Conventions, Build & Test Commands
-2. `.specify/memory/constitution.md` — Core Principles (especially Principle IV: Testability)
-3. The relevant spec, plan, and tasks files under `specs/` for the current work
+2. `openspec/constitution.md` — Core Principles (especially Principle IV: Testability)
+3. The relevant proposal, design, specs, and tasks under `openspec/changes/<change-name>/`, plus canonical specs under `openspec/specs/`
 
 ---
 
@@ -88,11 +88,11 @@ Evaluate all recent changes (staged, unstaged, and untracked files). Use `git di
 
 ## Spec Review Mode
 
-Use this mode when the caller instructs you to review SpecKit artifacts instead of code.
+Use this mode when the caller instructs you to review OpenSpec artifacts instead of code.
 
 ### Review Scope
 
-Read **all files** under `specs/` recursively (every feature directory and every artifact: `spec.md`, `plan.md`, `tasks.md`, `data-model.md`, `research.md`, `quickstart.md`, and `checklists/`). Also read `.specify/memory/constitution.md` and `AGENTS.md` for constraint context.
+Read the OpenSpec artifacts identified by the caller under `openspec/changes/<change-name>/` and relevant canonical specs under `openspec/specs/`. If no change is selected, review canonical specs and active changes, excluding `openspec/changes/archive/`. Also read `openspec/constitution.md` and `AGENTS.md` for constraint context.
 
 Do NOT use `git diff` or review code files. Your scope is exclusively the specification artifacts.
 
@@ -107,14 +107,14 @@ Do NOT use `git diff` or review code files. Your scope is exclusively the specif
 
 #### 2. Test Strategy Coverage
 
-- Does the plan define which tests are unit, integration, and e2e?
-- Are test file locations and naming patterns specified or inferable from the plan?
+- Does the design define which tests are unit, integration, and e2e?
+- Are test file locations and naming patterns specified or inferable from the design and tasks?
 - Is the test-to-requirement traceability clear — can you map every task tagged with test work back to a specific requirement?
 - Is the TDD approach specified where appropriate (test tasks before implementation tasks)?
 
 #### 3. Fixture Feasibility
 
-- Are test fixtures implied by the plan realistic and implementable?
+- Are test fixtures implied by the design realistic and implementable?
 - If `testdata/src/` packages are needed, are they described or do they already exist?
 - Are fixture dependencies documented (e.g., Go packages to load, coverage profiles to generate)?
 - Could the described fixtures be created without external services or network access?
@@ -135,9 +135,9 @@ Do NOT use `git diff` or review code files. Your scope is exclusively the specif
 
 #### 6. Constitution Alignment
 
-- Does the plan comply with Principle IV: Testability — are functions testable in isolation?
-- Does the coverage strategy satisfy Principle IV's MUST requirements (coverage strategy in plan, ratchet enforcement)?
-- Is missing coverage strategy flagged as CRITICAL in the spec or plan? (It should be.)
+- Does the design comply with Principle IV: Testability — are functions testable in isolation?
+- Does the coverage strategy satisfy Principle IV's MUST requirements (coverage strategy in design, ratchet enforcement)?
+- Is missing coverage strategy flagged as CRITICAL in the spec or design? (It should be.)
 - Are the other three principles (Accuracy, Minimal Assumptions, Actionable Output) also addressed?
 
 ---
@@ -149,7 +149,7 @@ For each finding, provide:
 ```
 ### [SEVERITY] Finding Title
 
-**File**: `path/to/file:line` (or `specs/NNN-feature/artifact.md` in spec review mode)
+**File**: `path/to/file:line` (or `openspec/changes/<change-name>/artifact.md` in spec review mode)
 **Constraint**: Which test quality dimension is violated
 **Description**: What the issue is and why it matters
 **Recommendation**: How to fix it

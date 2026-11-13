@@ -16,7 +16,7 @@ context: |
   All changes MUST align with these principles.
   Constitution violations are CRITICAL severity.
 
-  Full constitution: .specify/memory/constitution.md
+  Full constitution: openspec/constitution.md
 
 rules:
   proposal:

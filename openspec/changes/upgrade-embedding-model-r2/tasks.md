@@ -53,6 +53,6 @@
 - [x] 5.4 Verify constitution alignment: Composability (configurable defaults, graceful degradation preserved), Observable Quality (doctor reports new model status), Testability (chunker testable with arbitrary limits, no external service deps).
 - [x] 5.5 Update `AGENTS.md` to document the new `DEWEY_CHUNK_MAX_CHARS` env var, `embedding.max_chunk_chars` config field, updated default embedding model, and updated default chunk limit. Update `README.md`: add `DEWEY_CHUNK_MAX_CHARS` to the Environment Variables table, add `max_chunk_chars` to Provider Configuration examples, update `ollama pull` example and model references if the default model changed.
 - [x] 5.6 Create a GitHub issue in `unbound-force/website` documenting: new `DEWEY_CHUNK_MAX_CHARS` env var, new `embedding.max_chunk_chars` config field, changed default model name (if applicable), and `dewey doctor` legacy model advisory. Reference affected website pages: Environment Variables table, Provider Configuration section, Semantic Search Setup section, Doctor section. Use format: `docs: sync dewey embedding model upgrade documentation`.
-- [x] 5.7 If the default model name changed, update `.specify/memory/constitution.md` line 156 (default model name parenthetical) as a PATCH version bump.
+- [x] 5.7 If the default model name changed, update `openspec/constitution.md` line 156 (default model name parenthetical) as a PATCH version bump.
 <!-- spec-review: passed -->
 <!-- code-review: passed -->

@@ -134,11 +134,11 @@ Classify each feedback item with evidence and produce a recommendation.
 Load context for evidence-based classification (D10, FR-010):
 
 1. Convention packs from `.opencode/uf/packs/*.md`
-2. Constitution from `.specify/memory/constitution.md`
+2. Constitution from `openspec/constitution.md`
 3. `AGENTS.md` coding and testing conventions
 4. Spec artifacts for the PR branch:
-   - Speckit: `specs/NNN-*/` matching branch pattern
-   - OpenSpec: `openspec/changes/*/` matching branch
+   - `openspec/changes/<change-name>/` matching the `opsx/<change-name>` branch
+   - Referenced canonical capability specs under `openspec/specs/`
 5. Linked issues from PR description (`Fixes #N`, `Closes #N`, `Resolves #N`) — load acceptance criteria
 6. If `review-context` convention pack exists, use it for standardized discovery. Otherwise inline the discovery logic above.
 

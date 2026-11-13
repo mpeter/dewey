@@ -24,10 +24,8 @@
     - Upstream Stewardship
     - Development Standards
 
-  Templates requiring updates:
-    - .specify/templates/plan-template.md ✅ compatible
-    - .specify/templates/spec-template.md ✅ compatible
-    - .specify/templates/tasks-template.md ✅ compatible
+  Historical planning templates were checked for compatibility at amendment time.
+  The repository now uses the OpenSpec schema for planning artifacts.
 
   Constitution check: ALIGNED (all 4 principles match org constitution)
 
@@ -168,8 +166,8 @@ avoided unless no pure-Go alternative exists for a critical feature.
 
 - **Spec-First Development**: All changes that modify production code,
   test code, agent prompts, embedded assets, or CI configuration MUST
-  be preceded by a spec workflow (either the Speckit pipeline under
-  `specs/` or the OpenSpec pipeline under `openspec/changes/`). The
+  be preceded by the OpenSpec workflow under `openspec/changes/`,
+  the repository's sole requirements pipeline. The
   spec artifacts (proposal, design, tasks at minimum) MUST exist
   before implementation begins. This ensures every change has a
   planning record, a reviewable intent, and a traceable rationale.
@@ -185,8 +183,7 @@ avoided unless no pure-Go alternative exists for a critical feature.
   broken CI.
 - **Branch Naming**: All work MUST occur on feature branches. Direct
   commits to the main branch are prohibited except for trivial
-  documentation fixes. Speckit branches: `NNN-<name>` (e.g.,
-  `013-knowledge-compile`). OpenSpec branches: `opsx/<name>` (e.g.,
+  documentation fixes. OpenSpec branches: `opsx/<name>` (e.g.,
   `opsx/fix-chunk-overflow`).
 - **Code Review**: Every pull request MUST receive at least one
   approving review before merge.

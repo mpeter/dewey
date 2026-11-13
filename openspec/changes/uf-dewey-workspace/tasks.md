@@ -31,7 +31,7 @@
 
 - [x] 6.1 Update `README.md`: replace all `.dewey/` references with `.uf/dewey/` (~15 references)
 - [x] 6.2 Update `AGENTS.md`: replace all `.dewey/` references with `.uf/dewey/`
-- [x] 6.3 Update `.specify/memory/constitution.md`: replace `.dewey/` references with `.uf/dewey/` (2 references)
+- [x] 6.3 Update `openspec/constitution.md`: replace `.dewey/` references with `.uf/dewey/` (2 references)
 
 ## 7. Verification
 

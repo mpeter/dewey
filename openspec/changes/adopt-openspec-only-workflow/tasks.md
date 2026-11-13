@@ -1,3 +1,8 @@
+Implementation status: migration edits are present. Checkboxes remain open until
+the repository's CI-parity acceptance gate passes. Baseline full OpenSpec
+validation reports 18 pre-existing active-change defects after the three canonical
+specs receive structural repairs; those unrelated defects are outside this change.
+
 ## 1. Migration
 
 - [ ] 1.1 Preserve numbered specifications in dated archives with evidence and open-task annotations.

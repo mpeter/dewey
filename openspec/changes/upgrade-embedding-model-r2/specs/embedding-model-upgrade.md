@@ -132,5 +132,5 @@ None. All existing functionality is preserved. The `granite-embedding:30m` model
 The following files MUST be updated upon implementation:
 - `README.md` -- Environment Variables table (add `DEWEY_CHUNK_MAX_CHARS`), Provider Configuration examples (add `max_chunk_chars`), Semantic Search Setup section (update model name and `ollama pull` command)
 - `AGENTS.md` -- Provider Configuration section (add `max_chunk_chars`), Active Technologies, Environment Variables
-- `.specify/memory/constitution.md` -- line 156 (update default model name parenthetical, PATCH version bump)
+- `openspec/constitution.md` -- line 156 (update default model name parenthetical, PATCH version bump)
 - Website (`unbound-force/website`) -- file a GitHub issue tracking the new env var, config field, default model change, and doctor advisory

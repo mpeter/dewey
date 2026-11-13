@@ -77,14 +77,13 @@ Build & Test section in Audit mode):
 14. Top-level directory listing → project structure
 
 **Governance & Context Detection**:
-15. `.specify/memory/constitution.md` → constitution exists
+15. `openspec/constitution.md` → constitution exists
     (triggers Behavioral Rules section)
-16. `specs/` → check for `NNN-*/` subdirectories (Speckit)
-17. `openspec/config.yaml` or `openspec/` → OpenSpec configured
+16. `openspec/config.yaml` or `openspec/` → OpenSpec configured
     (triggers Specification Workflow section)
-18. `.opencode/uf/packs/` → convention packs deployed
+17. `.opencode/uf/packs/` → convention packs deployed
     (respect existing Convention Packs section from Go binary)
-19. `opencode.json` → check for Dewey MCP server
+18. `opencode.json` → check for Dewey MCP server
     (triggers Knowledge Retrieval section)
 
 Record what was detected. This informs both create and audit
@@ -150,7 +149,7 @@ list of key attributes:
 
 #### Section 6: Behavioral Rules (verbatim template, conditional)
 
-**Condition**: Insert ONLY when `.specify/memory/constitution.md`
+**Condition**: Insert ONLY when `openspec/constitution.md`
 exists. If no constitution is detected, omit this section entirely.
 
 Insert this verbatim:
@@ -197,36 +196,30 @@ These rules are non-negotiable. Violations are CRITICAL severity.
 
 #### Section 7: Specification Workflow (verbatim template, conditional)
 
-**Condition**: Insert ONLY when `specs/` directory has numbered
-subdirectories (`NNN-*/`) OR `openspec/` directory exists. If
-neither is detected, omit this section entirely.
+**Condition**: Insert ONLY when `openspec/` directory exists.
+If it is not detected, omit this section entirely.
 
 Insert this verbatim:
 
 ```markdown
 ## Specification Workflow
 
-All non-trivial changes MUST be preceded by a spec workflow.
+All non-trivial changes MUST use OpenSpec, the sole requirements
+workflow. Governance lives in `openspec/constitution.md`.
 
-| Tier | Tool | When | Artifacts |
-|------|------|------|-----------|
-| Strategic | Speckit | >= 3 stories, cross-repo | `specs/NNN-*/` |
-| Tactical | OpenSpec | < 3 stories, single-repo | `openspec/changes/*/` |
+Pipeline: `/opsx-propose` → `/opsx-apply` → `/opsx-archive`.
+Change artifacts live in `openspec/changes/<name>/`; canonical
+requirements live in `openspec/specs/`.
 
-Pipeline: `constitution → specify → clarify → plan → tasks →
-analyze → checklist → implement`
+**Ordering**: Constitution before change artifacts. Proposal,
+design, specs, and tasks as required by the change's schema
+before implementation. Spec artifacts MUST be committed/pushed
+before implementation begins.
 
-**Ordering**: Constitution before specs. Spec before plan. Plan
-before tasks. Tasks before implementation. Spec artifacts MUST
-be committed/pushed before implementation begins.
-
-**Branches**: Speckit: `NNN-<name>`. OpenSpec: `opsx/<name>`.
+**Branches**: `opsx/<name>` for OpenSpec changes.
 
 **Task bookkeeping**: Mark checkboxes `[x]` immediately on
 completion. `[P]` marks parallel-eligible tasks.
-
-**When in doubt**: Start with OpenSpec. Escalate to Speckit if
-scope grows beyond 3 stories or crosses repo boundaries.
 
 **What requires a spec**: New features, refactoring that changes
 signatures, test additions across multiple functions, agent
@@ -336,7 +329,7 @@ line (case-insensitive):
 | 4 | Coding Conventions | `convention`, `coding standard`, `style guide`, `coding convention` | No |
 | 5 | Testing Conventions | `test` | No |
 | 6 | Behavioral Rules | `behavioral`, `rule`, `constraint` | Constitution |
-| 7 | Specification Workflow | `specification`, `spec framework`, `speckit`, `openspec`, `spec workflow` | specs/openspec |
+| 7 | Specification Workflow | `specification`, `spec framework`, `openspec`, `spec workflow` | openspec/ |
 | 8 | Knowledge Retrieval | `knowledge`, `retrieval`, `dewey` | Dewey MCP |
 | 9 | Convention Packs | `convention pack` | Packs dir |
 | 10 | Architecture | `architect`, `pattern`, `design` | No |
@@ -372,11 +365,10 @@ directory exists. Flag:
    at least one fenced code block (triple backtick). Flag if
    the section exists but has no code blocks.
 3. **Constitution reference** (only when
-   `.specify/memory/constitution.md` exists): Check if AGENTS.md
+   `openspec/constitution.md` exists): Check if AGENTS.md
    has a Behavioral Rules section. Flag if absent.
-4. **Spec framework reference** (only when `specs/` has numbered
-   subdirs or `openspec/` exists): Check if AGENTS.md describes
-   the spec framework. Flag if absent.
+4. **Spec framework reference** (only when `openspec/` exists):
+   Check if AGENTS.md describes the OpenSpec workflow. Flag if absent.
 5. **Branch protection**: Check if AGENTS.md contains explicit
    instructions prohibiting direct commits to `main`. Look for
    co-occurrence of "main" with "MUST NOT"/"never"/"prohibited"
