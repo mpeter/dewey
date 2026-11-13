@@ -1,4 +1,4 @@
-## NEW Requirements
+## ADDED Requirements
 
 ### Requirement: /dewey-store Slash Command
 
