@@ -299,7 +299,7 @@ create it with just a heading:
 ```
 
 Do NOT add entries -- just the heading. Entries are added
-by the Scribe and `update-agent-context.sh`.
+by the Scribe as changes are documented.
 
 #### 3b: Present and Write
 
