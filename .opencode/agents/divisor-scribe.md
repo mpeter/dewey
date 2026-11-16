@@ -39,7 +39,7 @@ informational note and proceed with standard workflows.
 Before writing, read:
 
 1. `AGENTS.md` — Project overview, conventions, structure
-2. `.specify/memory/constitution.md` — Constitution (if present)
+2. `openspec/constitution.md` — Constitution (if present)
 3. `.opencode/uf/packs/content.md` — Content convention pack (focus on TD-NNN rules for Technical Documentation and shared VB/FA/FT rules)
 4. `.opencode/uf/packs/content-custom.md` — Project-specific content rules (if present)
 5. Existing documentation in the target area — read what already exists before writing or editing
@@ -72,7 +72,7 @@ When asked to update AGENTS.md:
 
 When asked to write or improve spec descriptions:
 
-1. Read the spec's existing artifacts (spec.md, plan.md, tasks.md)
+1. Read the change's existing artifacts under `openspec/changes/<change-name>/` (`proposal.md`, `design.md`, `tasks.md`, and `specs/<capability>/spec.md`) and relevant canonical specs under `openspec/specs/`
 2. Write user stories in Given/When/Then format
 3. Use RFC 2119 language (MUST/SHOULD/MAY) for requirements
 4. Keep specs focused on WHAT and WHY, not HOW

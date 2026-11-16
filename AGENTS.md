@@ -43,7 +43,7 @@ following categories are protected:
    frontmatter `temperature`, `tools.write`, `tools.edit`,
    `tools.bash` restrictions
 6. **Constitution MUST rules** — any MUST rule in
-   `.specify/memory/constitution.md` or hero constitutions
+   `openspec/constitution.md` or hero constitutions
 7. **Review iteration limits and worker concurrency** —
    max review iterations, max concurrent Swarm workers,
    retry limits
@@ -62,11 +62,11 @@ constitution violation (CRITICAL severity).
 
 Agents MUST NOT cross workflow phase boundaries:
 
-- **Specify/Clarify/Plan/Tasks/Analyze/Checklist** phases:
-  spec artifacts ONLY (`specs/NNN-*/` directory). No
+- **Proposal/Design/Delta Specs/Tasks** phases:
+  spec artifacts ONLY (`openspec/changes/<change>/` directory). No
   source code, test, agent, command, or config changes.
-- **Implement** phase: source code changes allowed,
-  guided by spec artifacts.
+- **Apply** phase: source code changes allowed,
+  guided by the OpenSpec change artifacts and `tasks.md`.
 - **Review** phase: findings and minor fixes only. No new
   features.
 
@@ -109,14 +109,9 @@ Exempt from council review:
 
 ## Spec-First Development (Mandatory)
 
-All changes that modify production code, test code, agent prompts, embedded assets, or CI configuration **must** be preceded by a spec workflow. The constitution (`.specify/memory/constitution.md`) is the highest-authority document in this project — all work must align with it.
+All changes that modify production code, test code, agent prompts, embedded assets, or CI configuration **must** be preceded by an OpenSpec change. The constitution (`openspec/constitution.md`) is the highest-authority document in this project — all work must align with it.
 
-Two spec workflows are available:
-
-| Workflow | Location | Best For |
-|----------|----------|----------|
-| **Speckit** | `specs/NNN-name/` | Numbered feature specs with the full pipeline (specify → clarify → plan → tasks → implement) |
-| **OpenSpec** | `openspec/changes/name/` | Targeted changes with lightweight artifacts (proposal → design → specs → tasks) via `/opsx-propose` and `/opsx-apply` |
+OpenSpec is the only requirements workflow, for changes of every size. Canonical requirements live in `openspec/specs/`; proposals, designs, delta specs, and tasks live in `openspec/changes/<change>/`.
 
 **What requires a spec** (no exceptions without explicit user override):
 - New features or capabilities
@@ -134,62 +129,37 @@ When an agent is unsure whether a change is trivial, it **must** ask the user ra
 
 ### Pipeline
 
-The workflow is a strict, sequential pipeline. Each stage has a corresponding `/speckit.*` command:
+Create the change artifacts before implementation, then apply, validate, and archive the change:
 
 ```text
-constitution → specify → clarify → plan → tasks → analyze → checklist → implement
+constitution → proposal → design + delta specs → tasks → apply → validate → archive
 ```
 
 | Command | Purpose |
 |---------|---------|
-| `/speckit.constitution` | Create or update the project constitution |
-| `/speckit.specify` | Create a feature specification from a description |
-| `/speckit.clarify` | Reduce ambiguity in the spec before planning |
-| `/speckit.plan` | Generate the technical implementation plan |
-| `/speckit.tasks` | Generate actionable, dependency-ordered task list |
-| `/speckit.analyze` | Non-destructive cross-artifact consistency analysis |
-| `/speckit.checklist` | Generate requirement quality validation checklists |
-| `/speckit.implement` | Execute the implementation plan task by task |
+| `/opsx-explore` | Clarify intent and investigate options without implementing |
+| `/opsx-propose` | Create the proposal, design, delta specs, and dependency-ordered tasks |
+| `/opsx-apply` | Implement the change task by task, updating `tasks.md` |
+| `openspec validate <change> --strict` | Validate change artifact structure before archive |
+| `/opsx-archive` | Sync delta requirements into canonical specs and archive the completed change |
 
 ### Ordering Constraints
 
-1. Constitution must exist before specs.
-2. Spec must exist before plan.
-3. Plan must exist before tasks.
-4. Tasks must exist before implementation and analysis.
-5. Clarify should run before plan (skipping increases rework risk).
-6. Analyze should run after tasks but before implementation.
-7. All checklists must pass before implementation (or user must explicitly override).
-
-### Strategic vs Tactical
-
-| Criterion | Speckit (Strategic) | OpenSpec (Tactical) |
-|-----------|:------------------:|:-------------------:|
-| User stories | >= 3 | < 3 |
-| Cross-repo impact | Yes | No |
-| New MCP tools | Always | Never |
-| Bug fix | Never | Always |
-| Single-package maintenance | Never | Usually |
-
-When in doubt, start with OpenSpec. If scope grows beyond 3 stories, escalate to Speckit.
+1. Read `openspec/constitution.md` before proposing a change.
+2. Establish the proposal before writing the design and delta specs.
+3. Resolve material ambiguity and assess constitution alignment before implementation.
+4. Derive tasks from the design and delta specs; all required artifacts must exist before apply.
+5. Satisfy the Spec Commit Gate before starting `/opsx-apply`.
+6. Verify implementation against the requirements, pass CI-equivalent checks, and validate the change before archive.
+7. Sync delta specs into `openspec/specs/` and archive completed changes under `openspec/changes/archive/`. Historical archives preserve evidence, not a separate active workflow.
 
 ### Branch Conventions
 
-Both tiers enforce branch-based workflows:
-
-- **Speckit** branches: `NNN-<short-name>`
-  (e.g., `013-binary-rename`). Created automatically by
-  `/speckit.specify`. Validated by `check-prerequisites.sh`
-  at every pipeline step (hard gate).
-- **OpenSpec** branches: `opsx/<change-name>`
-  (e.g., `opsx/doctor-ux-improvement`). Created by
-  `/opsx-propose`. Validated by `/opsx-apply` before
-  implementation (hard gate).
-
-The `opsx/` prefix namespace ensures OpenSpec branches
-are visually distinct from Speckit branches in
-`git branch` output and do not collide with the
-`NNN-*` numbering pattern.
+Use `opsx/<change-name>` branches for all OpenSpec changes
+(e.g., `opsx/doctor-ux-improvement`). Create or switch to
+the matching branch when proposing the change and verify
+it before `/opsx-apply`. Numbered feature branches are not
+part of the requirements workflow.
 
 ### Task Completion Bookkeeping
 
@@ -202,7 +172,7 @@ Before marking any task complete, you **must** validate whether the change requi
 - `README.md` — new/changed commands, flags, output formats, or architecture
 - `AGENTS.md` — new conventions, packages, patterns, or workflow changes
 - GoDoc comments — new or modified exported functions, types, and packages
-- Spec artifacts under `specs/` — if the change affects planned behavior
+- OpenSpec artifacts under `openspec/` — if the change affects planned behavior
 
 A task is not complete until its documentation impact has been assessed and any necessary updates have been made.
 
@@ -224,7 +194,7 @@ Exempt from this requirement:
 
 ### Spec Commit Gate
 
-All spec artifacts (`spec.md`, `plan.md`, `tasks.md`, and any other files under `specs/`) **must** be committed and pushed before implementation begins. Run `/speckit.implement` only after the spec commit is on the remote.
+All change artifacts (`proposal.md`, `design.md`, delta specs under `specs/`, `tasks.md`, and supporting files under `openspec/changes/<change>/`) **must** be committed before implementation begins. They **must** also be pushed before `/opsx-apply`, unless the work order explicitly requires local-only work. A local-only work order waives the push, not the pre-implementation commit.
 
 ### Constitution Check
 
@@ -556,16 +526,22 @@ Three GitHub Actions workflows:
 
 ## Spec Organization
 
-Specs are numbered with 3-digit zero-padded prefixes:
+OpenSpec is the canonical requirements tree:
 
 ```text
-specs/
-  001-core-implementation/     # Persistence, vector search, content sources, CLI (Complete)
-  002-quality-ratchets/        # Gaze CI, CRAPload reduction, contract coverage (In Progress)
-  010-code-source-index/       # Code source indexing, Go chunker, manifest generation (In Progress)
-  013-knowledge-compile/       # Knowledge compilation, temporal intelligence, linting, trust tiers (Complete)
-  015-curated-knowledge-stores/ # File-backed learnings, curation pipeline, knowledge stores, curated tier (In Progress)
-  016-pluggable-providers/       # Pluggable embedding/synthesis providers (Ollama, Vertex AI), store_compiled, global config (Complete)
+openspec/
+  constitution.md             # Project principles and governance
+  config.yaml                 # OpenSpec schema and repository context
+  specs/
+    <capability>/spec.md      # Canonical requirements and scenarios
+  changes/
+    <change-name>/            # Active change
+      proposal.md
+      design.md
+      specs/<capability>/spec.md # Delta requirements and scenarios
+      tasks.md
+    archive/
+      YYYY-MM-DD-<change-name>/ # Completed changes and historical evidence
 ```
 
 ## Active Technologies

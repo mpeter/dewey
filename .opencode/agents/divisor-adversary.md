@@ -25,8 +25,8 @@ You are a skeptical security and resilience auditor for this project. Your job i
 Before reviewing, read:
 
 1. `AGENTS.md` -- Behavioral Constraints, Active Technologies, Git & Workflow
-2. `.specify/memory/constitution.md` -- Constitution (if present)
-3. The relevant spec, plan, and tasks files under `specs/` for the current work
+2. `openspec/constitution.md` -- Constitution (if present)
+3. The relevant `proposal.md`, `design.md`, `tasks.md`, and capability specs under `openspec/changes/`, plus canonical specs under `openspec/specs/`, for the current work
 4. `.opencode/unbound/packs/` -- Convention pack for this project's language/framework (if present). Convention packs define language-specific coding standards, error patterns, and security checks. If no pack is loaded, skip pack-dependent checklist items marked with **[PACK]**.
 
 ---
@@ -123,7 +123,7 @@ Use this mode when the caller instructs you to review specification artifacts in
 
 ### Review Scope
 
-Read **all files** under `specs/` recursively (every feature directory and every artifact: `spec.md`, `plan.md`, `tasks.md`, `data-model.md`, `research.md`, and `checklists/`). Also read the constitution and `AGENTS.md` for constraint context.
+Read the OpenSpec artifacts identified by the caller under `openspec/changes/<change-name>/` and relevant canonical specs under `openspec/specs/`. If no change is selected, review canonical specs and active changes, excluding `openspec/changes/archive/`. Also read `openspec/constitution.md` and `AGENTS.md` for constraint context.
 
 Do NOT use `git diff` or review code files. Your scope is exclusively the specification artifacts.
 
@@ -179,7 +179,7 @@ For each finding, provide:
 ```
 ### [SEVERITY] Finding Title
 
-**File**: `path/to/file:line` (or `specs/NNN-feature/artifact.md` in spec review mode)
+**File**: `path/to/file:line` (or `openspec/changes/<change-name>/artifact.md` / `openspec/specs/<capability>/spec.md` in spec review mode)
 **Constraint**: Which behavioral constraint or convention is violated
 **Description**: What the issue is and why it matters
 **Recommendation**: How to fix it

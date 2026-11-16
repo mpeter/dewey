@@ -25,11 +25,11 @@ import (
 // (SOLID Single Responsibility). The vault.Client owns in-memory indexing;
 // VaultStore owns the persistence bridge.
 type VaultStore struct {
-	store        *store.Store
-	embedder     embed.Embedder // optional — nil when Ollama is unavailable
-	vaultPath    string
-	sourceID     string // e.g., "disk-local"
-	maxChunkChars int   // max chars per embedding chunk; 0 uses embed.DefaultMaxChunkChars
+	store         *store.Store
+	embedder      embed.Embedder // optional — nil when Ollama is unavailable
+	vaultPath     string
+	sourceID      string // e.g., "disk-local"
+	maxChunkChars int    // max chars per embedding chunk; 0 uses embed.DefaultMaxChunkChars
 }
 
 // NewVaultStore creates a VaultStore adapter for bridging vault and store.

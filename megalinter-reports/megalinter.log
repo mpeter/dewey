@@ -1,0 +1,352 @@
+----------------------------------------------------------------------------------------------------
+------------------------------------ MegaLinter, by OX Security ------------------------------------
+----------------------------------------------------------------------------------------------------
+ - Image Creation Date: 2026-01-04T09:48:44Z
+ - Image Revision: 42bb470545e359597e7f12156947c436e4e3fb9a
+ - Image Version: v9.3.0
+----------------------------------------------------------------------------------------------------
+The MegaLinter documentation can be found at:
+ - https://megalinter.io/9.3.0
+----------------------------------------------------------------------------------------------------
+::group::MegaLinter initialization (expand for details)
+MegaLinter will analyze workspace [/github/workspace]
+GITHUB_REPOSITORY: mpeter/dewey
+GITHUB_REF: refs/pull/1/merge
+GITHUB_RUN_ID: 43891466802
+
+
+JSON_ESLINT_PLUGIN_JSONC has been disabled in MegaLinter for the following reason: Bug in eslint-plugin-jsonc: <https://github.com/ota-meshi/eslint-plugin-jsonc/issues/328>
+MAKEFILE_CHECKMAKE has been disabled in MegaLinter for the following reason: Security issues: <https://github.com/checkmake/checkmake/issues/99>
+MARKDOWN_REMARK_LINT has been disabled in MegaLinter for the following reason: Bug in remark-lint: <https://github.com/remarkjs/remark-lint/issues/322>
+PUPPET_PUPPET_LINT has been disabled in MegaLinter for the following reason: <https://github.com/puppetlabs/puppet-lint/issues/251>
+SALESFORCE_LIGHTNING_FLOW_SCANNER has been disabled in MegaLinter for the following reason: Repo archived -> <https://github.com/Lightning-Flow-Scanner>
+Skipped linters: ACTION_ACTIONLINT, ANSIBLE_ANSIBLE_LINT, API_SPECTRAL, ARM_ARM_TTK, BASH_EXEC, BASH_SHELLCHECK, BASH_SHFMT, BICEP_BICEP_LINTER, CLOJURE_CLJSTYLE, CLOJURE_CLJ_KONDO, CLOUDFORMATION_CFN_LINT, COFFEE_COFFEELINT, COPYPASTE_JSCPD, CPP_CLANG_FORMAT, CPP_CPPCHECK, CPP_CPPLINT, CSHARP_CSHARPIER, CSHARP_DOTNET_FORMAT, CSHARP_ROSLYNATOR, CSS_STYLELINT, C_CLANG_FORMAT, C_CPPCHECK, C_CPPLINT, DART_DARTANALYZER, DOCKERFILE_HADOLINT, EDITORCONFIG_EDITORCONFIG_CHECKER, ENV_DOTENV_LINTER, GHERKIN_GHERKIN_LINT, GO_REVIVE, GRAPHQL_GRAPHQL_SCHEMA_LINTER, GROOVY_NPM_GROOVY_LINT, HTML_DJLINT, HTML_HTMLHINT, JAVASCRIPT_ES, JAVASCRIPT_PRETTIER, JAVASCRIPT_STANDARD, JAVA_CHECKSTYLE, JAVA_PMD, JSON_ESLINT_PLUGIN_JSONC, JSON_JSONLINT, JSON_NPM_PACKAGE_JSON_LINT, JSON_PRETTIER, JSON_V8R, JSX_ESLINT, KOTLIN_DETEKT, KOTLIN_KTLINT, KUBERNETES_HELM, KUBERNETES_KUBECONFORM, KUBERNETES_KUBESCAPE, LATEX_CHKTEX, LUA_LUACHECK, LUA_SELENE, LUA_STYLUA, MAKEFILE_CHECKMAKE, MARKDOWN_MARKDOWN_TABLE_FORMATTER, MARKDOWN_REMARK_LINT, MARKDOWN_RUMDL, PERL_PERLCRITIC, PHP_PHPCS, PHP_PHPCSFIXER, PHP_PHPLINT, PHP_PHPSTAN, PHP_PSALM, POWERSHELL_POWERSHELL, POWERSHELL_POWERSHELL_FORMATTER, PROTOBUF_PROTOLINT, PUPPET_PUPPET_LINT, PYTHON_BANDIT, PYTHON_BLACK, PYTHON_FLAKE8, PYTHON_ISORT, PYTHON_MYPY, PYTHON_PYLINT, PYTHON_PYRIGHT, PYTHON_RUFF, PYTHON_RUFF_FORMAT, RAKU_RAKU, REPOSITORY_CHECKOV, REPOSITORY_DEVSKIM, REPOSITORY_DUSTILOCK, REPOSITORY_GRYPE, REPOSITORY_KICS, REPOSITORY_KINGFISHER, REPOSITORY_LS_LINT, REPOSITORY_SECRETLINT, REPOSITORY_SEMGREP, REPOSITORY_SYFT, REPOSITORY_TRIVY, REPOSITORY_TRIVY_SBOM, REPOSITORY_TRUFFLEHOG, ROBOTFRAMEWORK_ROBOCOP, RST_RSTCHECK, RST_RSTFMT, RST_RST_LINT, RUBY_RUBOCOP, RUST_CLIPPY, R_LINTR, SALESFORCE_CODE_ANALYZER_APEX, SALESFORCE_CODE_ANALYZER_AURA, SALESFORCE_CODE_ANALYZER_LWC, SALESFORCE_LIGHTNING_FLOW_SCANNER, SALESFORCE_SFDX_SCANNER_APEX, SALESFORCE_SFDX_SCANNER_AURA, SALESFORCE_SFDX_SCANNER_LWC, SCALA_SCALAFIX, SNAKEMAKE_LINT, SNAKEMAKE_SNAKEFMT, SPELL_CODESPELL, SPELL_CSPELL, SPELL_LYCHEE, SPELL_PROSELINT, SPELL_VALE, SQL_SQLFLUFF, SQL_TSQLLINT, SWIFT_SWIFTLINT, TEKTON_TEKTON_LINT, TERRAFORM_TERRAFORM_FMT, TERRAFORM_TERRAGRUNT, TERRAFORM_TERRASCAN, TERRAFORM_TFLINT, TSX_ESLINT, TYPESCRIPT_ES, TYPESCRIPT_PRETTIER, TYPESCRIPT_STANDARD, VBDOTNET_DOTNET_FORMAT, XML_XMLLINT, YAML_PRETTIER, YAML_V8R
+[ApiReporter] Not enabled as API_REPORTER is not defined to true
+To receive reports as email, please set variable EMAIL_REPORTER_EMAIL
+::endgroup::
+::group::MegaLinter now collects the files to analyse (expand for details)
+Listing updated files in [/github/workspace] using git diff.
+Modified files:
+.mega-linter.yml
+.opencode/agents/cobalt-crush-dev.md
+.opencode/agents/constitution-check.md
+.opencode/agents/divisor-adversary.md
+.opencode/agents/divisor-architect.md
+.opencode/agents/divisor-curator.md
+.opencode/agents/divisor-guard.md
+.opencode/agents/divisor-herald.md
+.opencode/agents/divisor-scribe.md
+.opencode/agents/divisor-sre.md
+.opencode/agents/divisor-testing.md
+.opencode/agents/mx-f-coach.md
+.opencode/agents/reviewer-testing.md
+.opencode/commands/address-feedback.md
+.opencode/commands/agent-brief.md
+.opencode/commands/cobalt-crush.md
+.opencode/commands/constitution-check.md
+.opencode/commands/finale.md
+.opencode/commands/gaze-fix.md
+.opencode/commands/opsx-explore.md
+.opencode/commands/review-council.md
+.opencode/commands/review-pr.md
+.opencode/commands/speckit.analyze.md
+.opencode/commands/speckit.checklist.md
+.opencode/commands/speckit.clarify.md
+.opencode/commands/speckit.constitution.md
+.opencode/commands/speckit.implement.md
+.opencode/commands/speckit.plan.md
+.opencode/commands/speckit.specify.md
+.opencode/commands/speckit.tasks.md
+.opencode/commands/speckit.taskstoissues.md
+.opencode/commands/speckit.testreview.md
+.opencode/commands/uf-init.md
+.opencode/commands/unleash.md
+.opencode/references/doc-scoring-model.md
+.opencode/skill/speckit-workflow/SKILL.md
+.opencode/skills/openspec-explore/SKILL.md
+.opencode/skills/speckit-workflow/SKILL.md
+.opencode/unbound/packs/go-custom.md
+.specify/config.yaml
+.specify/scripts/bash/check-prerequisites.sh
+.specify/scripts/bash/common.sh
+.specify/scripts/bash/create-new-feature.sh
+.specify/scripts/bash/setup-plan.sh
+.specify/scripts/bash/update-agent-context.sh
+.specify/templates/agent-file-template.md
+.specify/templates/checklist-template.md
+.specify/templates/constitution-template.md
+.specify/templates/plan-template.md
+.specify/templates/spec-template.md
+.specify/templates/tasks-template.md
+AGENTS.md
+openspec/changes/adopt-openspec-only-workflow/.openspec.yaml
+openspec/changes/adopt-openspec-only-workflow/design.md
+openspec/changes/adopt-openspec-only-workflow/proposal.md
+openspec/changes/adopt-openspec-only-workflow/specs/repository-workflow/spec.md
+openspec/changes/adopt-openspec-only-workflow/tasks.md
+openspec/changes/archive/2026-03-23-core-implementation/.openspec.yaml
+openspec/changes/archive/2026-03-23-core-implementation/checklists/requirements.md
+openspec/changes/archive/2026-03-23-core-implementation/contracts/cli-commands.md
+openspec/changes/archive/2026-03-23-core-implementation/contracts/mcp-tools.md
+openspec/changes/archive/2026-03-23-core-implementation/data-model.md
+openspec/changes/archive/2026-03-23-core-implementation/plan.md
+openspec/changes/archive/2026-03-23-core-implementation/research.md
+openspec/changes/archive/2026-03-23-core-implementation/spec.md
+openspec/changes/archive/2026-03-23-core-implementation/tasks.md
+openspec/changes/archive/2026-03-23-quality-ratchets/.openspec.yaml
+openspec/changes/archive/2026-03-23-quality-ratchets/checklists/requirements.md
+openspec/changes/archive/2026-03-23-quality-ratchets/plan.md
+openspec/changes/archive/2026-03-23-quality-ratchets/research.md
+openspec/changes/archive/2026-03-23-quality-ratchets/spec.md
+openspec/changes/archive/2026-03-23-quality-ratchets/tasks.md
+openspec/changes/archive/2026-03-28-unified-content-serve/.openspec.yaml
+openspec/changes/archive/2026-03-28-unified-content-serve/checklists/requirements.md
+openspec/changes/archive/2026-03-28-unified-content-serve/contracts/mcp-tools.md
+openspec/changes/archive/2026-03-28-unified-content-serve/data-model.md
+openspec/changes/archive/2026-03-28-unified-content-serve/plan.md
+openspec/changes/archive/2026-03-28-unified-content-serve/quickstart.md
+openspec/changes/archive/2026-03-28-unified-content-serve/research.md
+openspec/changes/archive/2026-03-28-unified-content-serve/spec.md
+openspec/changes/archive/2026-03-28-unified-content-serve/tasks.md
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/.openspec.yaml
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/checklists/requirements.md
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/plan.md
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/quickstart.md
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/research.md
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/spec.md
+openspec/changes/archive/2026-03-30-doctor-emoji-markers/tasks.md
+openspec/changes/archive/2026-03-30-unified-ignore/.openspec.yaml
+openspec/changes/archive/2026-03-30-unified-ignore/checklists/requirements.md
+openspec/changes/archive/2026-03-30-unified-ignore/contracts/matcher.go
+openspec/changes/archive/2026-03-30-unified-ignore/plan.md
+openspec/changes/archive/2026-03-30-unified-ignore/quickstart.md
+openspec/changes/archive/2026-03-30-unified-ignore/research.md
+openspec/changes/archive/2026-03-30-unified-ignore/spec.md
+openspec/changes/archive/2026-03-30-unified-ignore/tasks.md
+openspec/changes/archive/2026-04-03-ollama-autostart/.openspec.yaml
+openspec/changes/archive/2026-04-03-ollama-autostart/checklists/requirements.md
+openspec/changes/archive/2026-04-03-ollama-autostart/plan.md
+openspec/changes/archive/2026-04-03-ollama-autostart/quickstart.md
+openspec/changes/archive/2026-04-03-ollama-autostart/research.md
+openspec/changes/archive/2026-04-03-ollama-autostart/spec.md
+openspec/changes/archive/2026-04-03-ollama-autostart/tasks.md
+openspec/changes/archive/2026-04-03-store-learning/.openspec.yaml
+openspec/changes/archive/2026-04-03-store-learning/checklists/requirements.md
+openspec/changes/archive/2026-04-03-store-learning/plan.md
+openspec/changes/archive/2026-04-03-store-learning/quickstart.md
+openspec/changes/archive/2026-04-03-store-learning/research.md
+openspec/changes/archive/2026-04-03-store-learning/spec.md
+openspec/changes/archive/2026-04-03-store-learning/tasks.md
+openspec/changes/archive/2026-04-06-code-source-index/.openspec.yaml
+openspec/changes/archive/2026-04-06-code-source-index/checklists/requirements.md
+openspec/changes/archive/2026-04-06-code-source-index/contracts/chunker-interface.md
+openspec/changes/archive/2026-04-06-code-source-index/contracts/code-source.md
+openspec/changes/archive/2026-04-06-code-source-index/contracts/config-validation.md
+openspec/changes/archive/2026-04-06-code-source-index/contracts/go-chunker.md
+openspec/changes/archive/2026-04-06-code-source-index/contracts/manifest-command.md
+openspec/changes/archive/2026-04-06-code-source-index/plan.md
+openspec/changes/archive/2026-04-06-code-source-index/quickstart.md
+openspec/changes/archive/2026-04-06-code-source-index/research.md
+openspec/changes/archive/2026-04-06-code-source-index/spec.md
+openspec/changes/archive/2026-04-06-code-source-index/tasks.md
+openspec/changes/archive/2026-04-06-structured-diagnostics/.openspec.yaml
+openspec/changes/archive/2026-04-06-structured-diagnostics/checklists/requirements.md
+openspec/changes/archive/2026-04-06-structured-diagnostics/plan.md
+openspec/changes/archive/2026-04-06-structured-diagnostics/quickstart.md
+openspec/changes/archive/2026-04-06-structured-diagnostics/research.md
+openspec/changes/archive/2026-04-06-structured-diagnostics/spec.md
+openspec/changes/archive/2026-04-06-structured-diagnostics/tasks.md
+openspec/changes/archive/2026-04-07-background-index/.openspec.yaml
+openspec/changes/archive/2026-04-07-background-index/checklists/requirements.md
+openspec/changes/archive/2026-04-07-background-index/plan.md
+openspec/changes/archive/2026-04-07-background-index/quickstart.md
+openspec/changes/archive/2026-04-07-background-index/research.md
+openspec/changes/archive/2026-04-07-background-index/spec.md
+openspec/changes/archive/2026-04-07-background-index/tasks.md
+openspec/changes/archive/2026-04-07-live-reindex/.openspec.yaml
+openspec/changes/archive/2026-04-07-live-reindex/checklists/requirements.md
+openspec/changes/archive/2026-04-07-live-reindex/plan.md
+openspec/changes/archive/2026-04-07-live-reindex/quickstart.md
+openspec/changes/archive/2026-04-07-live-reindex/research.md
+openspec/changes/archive/2026-04-07-live-reindex/spec.md
+openspec/changes/archive/2026-04-07-live-reindex/tasks.md
+openspec/changes/archive/2026-04-10-knowledge-compile/.openspec.yaml
+openspec/changes/archive/2026-04-10-knowledge-compile/checklists/requirements.md
+openspec/changes/archive/2026-04-10-knowledge-compile/contracts/compile-tool.md
+openspec/changes/archive/2026-04-10-knowledge-compile/contracts/lint-tool.md
+openspec/changes/archive/2026-04-10-knowledge-compile/contracts/llm-interface.md
+openspec/changes/archive/2026-04-10-knowledge-compile/contracts/promote-tool.md
+openspec/changes/archive/2026-04-10-knowledge-compile/contracts/schema-migration.md
+openspec/changes/archive/2026-04-10-knowledge-compile/contracts/store-learning.md
+openspec/changes/archive/2026-04-10-knowledge-compile/plan.md
+openspec/changes/archive/2026-04-10-knowledge-compile/quickstart.md
+openspec/changes/archive/2026-04-10-knowledge-compile/research.md
+openspec/changes/archive/2026-04-10-knowledge-compile/spec.md
+openspec/changes/archive/2026-04-10-knowledge-compile/tasks.md
+openspec/changes/archive/2026-04-11-docs-sync/.openspec.yaml
+openspec/changes/archive/2026-04-11-docs-sync/checklists/requirements.md
+openspec/changes/archive/2026-04-11-docs-sync/spec.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/.openspec.yaml
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/checklists/requirements.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/contracts/cli-commands.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/contracts/curate-package.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/contracts/mcp-tools.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/plan.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/quickstart.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/research.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/spec.md
+openspec/changes/archive/2026-04-22-curated-knowledge-stores/tasks.md
+openspec/changes/archive/2026-05-08-pluggable-providers/.openspec.yaml
+openspec/changes/archive/2026-05-08-pluggable-providers/plan.md
+openspec/changes/archive/2026-05-08-pluggable-providers/spec.md
+openspec/changes/archive/2026-05-08-pluggable-providers/tasks.md
+openspec/changes/content-sanitizer/specs/content-sanitizer/spec.md
+openspec/changes/dewey-store-command/specs/command-behavior/spec.md
+openspec/changes/doctor-ux-improvement/specs/doctor-output/spec.md
+openspec/changes/fix-cask-checksum-patching/specs/cask-checksum-patching/spec.md
+openspec/changes/fix-chunk-overflow/specs/chunker/spec.md
+openspec/changes/fix-dewey-gitignore/specs/gitignore-pattern/spec.md
+openspec/changes/fix-embed-bare-string/specs/embed-array-format/spec.md
+openspec/changes/fix-init-scaffolding/specs/init-flow/spec.md
+openspec/changes/fix-relative-source-paths/specs/path-resolution/spec.md
+openspec/changes/fix-web-link-extraction/specs/link-extraction/spec.md
+openspec/changes/gaze-quality-ratchet-3/specs/quality-ratchet-3/spec.md
+openspec/changes/go-module-v3-path/specs/module-path/spec.md
+openspec/changes/index-pipeline-performance/specs/index-performance/spec.md
+openspec/changes/learning-identity-collision-fix/specs/learning-identity/spec.md
+openspec/changes/ollama-host-fallback/specs/ollama-host-fallback/spec.md
+openspec/changes/release-ci-gate/specs/release-preflight/spec.md
+openspec/changes/uf-dewey-workspace/specs/workspace-path/spec.md
+openspec/changes/uf-dewey-workspace/tasks.md
+openspec/changes/upgrade-embedding-model-r2/specs/embedding-model-upgrade/spec.md
+openspec/changes/upgrade-embedding-model-r2/tasks.md
+openspec/config.yaml
+openspec/constitution.md
+openspec/schemas/unbound-force/schema.yaml
+openspec/specs/documentation-accuracy/spec.md
+openspec/specs/homebrew-dependency/spec.md
+openspec/specs/quality-ratchet/spec.md
+- File extensions: .go, .md, .yaml, .yml
+- Excluding regex: (\.opencode/|testdata/)
+- Excluding .gitignored files [0]: 
+Kept [149] files on [175] found files
+
++----MATCHING LINTERS--------+------------+----------------+------------+
+| Descriptor | Linter        | Criteria   | Matching files | Format/Fix |
++------------+---------------+------------+----------------+------------+
+| GO         | golangci-lint | .go        | project        | yes        |
+| MARKDOWN   | markdownlint  | .md        | 7              | yes        |
+| REPOSITORY | git_diff      |            | project        | yes        |
+| REPOSITORY | gitleaks      |            | project        | yes        |
+| YAML       | yamllint      | .yml|.yaml | 19             | yes        |
++------------+---------------+------------+----------------+------------+
+::endgroup::
+Processing linters on [4] parallel cores… (can be decreased with variable PARALLEL_PROCESS_NUMBER in case of performance issues)
+::group::[32m✅ Linted [REPOSITORY] files with [git_diff] successfully - (0.31s)[0m (expand for details)
+- Using [git_diff v2.52.0] https://megalinter.io/9.3.0/descriptors/repository_git_diff
+- MegaLinter key: [REPOSITORY_GIT_DIFF]
+- Rules config: identified by [git_diff]
+- Command: [git diff --check]
+::endgroup::
+::group::[32m✅ Linted [YAML] files with [yamllint] successfully - (1.14s)[0m (expand for details)
+- Using [yamllint v1.37.1] https://megalinter.io/9.3.0/descriptors/yaml_yamllint
+- MegaLinter key: [YAML_YAMLLINT]
+- Rules config: [.yamllint.yml]
+- Number of files analyzed: [19]
+- Command: [yamllint --format standard -c /action/lib/.automation/.yamllint.yml .mega-linter.yml openspec/changes/adopt-openspec-only-workflow/.openspec.yaml openspec/changes/archive/2026-03-23-core-implementation/.openspec.yaml openspec/changes/archive/2026-03-...(truncated)]
+::endgroup::
+::group::[33m⚠️ Linted [MARKDOWN] files with [markdownlint]: Found 58 non blocking error(s) and 0 non blocking warning(s) - (1.75s)[0m (expand for details)
+- Using [markdownlint v0.47.0] https://megalinter.io/9.3.0/descriptors/markdown_markdownlint
+- MegaLinter key: [MARKDOWN_MARKDOWNLINT]
+- Rules config: [.markdownlint.json]
+- Number of files analyzed: [7]
+- Command: [markdownlint --fix -c /action/lib/.automation/.markdownlint.json AGENTS.md openspec/changes/adopt-openspec-only-workflow/design.md openspec/changes/adopt-openspec-only-workflow/proposal.md openspec/changes/adopt-openspec-only-workflow/tasks.md opensp...(truncated)]
+--Error detail:
+AGENTS.md:5:401 error MD013/line-length Line length [Expected: 400; Actual: 701]
+AGENTS.md:79:401 error MD013/line-length Line length [Expected: 400; Actual: 461]
+AGENTS.md:139:11 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:139:21 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:139:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:139:11 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:236:8 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:236:16 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:236:30 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:236:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:236:8 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:236:16 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:245:11 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:245:25 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:245:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:245:11 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:265:8 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:265:22 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:265:40 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:265:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:265:8 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:265:22 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:306:401 error MD013/line-length Line length [Expected: 400; Actual: 410]
+AGENTS.md:368:8 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:368:17 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:368:31 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:368:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:368:8 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:368:17 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:423:401 error MD013/line-length Line length [Expected: 400; Actual: 569]
+AGENTS.md:449:15 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:449:27 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:449:41 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:449:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:449:15 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:449:27 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:516:401 error MD013/line-length Line length [Expected: 400; Actual: 539]
+AGENTS.md:521:8 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:521:18 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:521:33 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:521:42 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+AGENTS.md:521:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:521:8 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:521:18 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:521:33 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
+AGENTS.md:564:401 error MD013/line-length Line length [Expected: 400; Actual: 424]
+AGENTS.md:573:401 error MD013/line-length Line length [Expected: 400; Actual: 412]
+openspec/changes/adopt-openspec-only-workflow/design.md:1 error MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## Context"]
+openspec/changes/adopt-openspec-only-workflow/proposal.md:1 error MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## Why"]
+openspec/changes/adopt-openspec-only-workflow/tasks.md:1 error MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Implementation status: migrati..."]
+openspec/changes/uf-dewey-workspace/tasks.md:1 error MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## 1. Introduce Workspace Cons..."]
+openspec/changes/upgrade-embedding-model-r2/tasks.md:13 error MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## 1. Add configurable chunk l..."]
+openspec/changes/upgrade-embedding-model-r2/tasks.md:15:401 error MD013/line-length Line length [Expected: 400; Actual: 555]
+openspec/changes/upgrade-embedding-model-r2/tasks.md:18:401 error MD013/line-length Line length [Expected: 400; Actual: 603]
+openspec/changes/upgrade-embedding-model-r2/tasks.md:26:401 error MD013/line-length Line length [Expected: 400; Actual: 905]
+openspec/changes/upgrade-embedding-model-r2/tasks.md:29:401 error MD013/line-length Line length [Expected: 400; Actual: 442]
+openspec/changes/upgrade-embedding-model-r2/tasks.md:54:401 error MD013/line-length Line length [Expected: 400; Actual: 411]
+openspec/changes/upgrade-embedding-model-r2/tasks.md:55:401 error MD013/line-length Line length [Expected: 400; Actual: 452]
+
+::endgroup::
+::group::[32m✅ Linted [REPOSITORY] files with [gitleaks] successfully - (2.83s)[0m (expand for details)
+- Using [gitleaks v8.30.0] https://megalinter.io/9.3.0/descriptors/repository_gitleaks
+- MegaLinter key: [REPOSITORY_GITLEAKS]
+- Rules config: [.gitleaks.toml]
+- Command: [gitleaks detect --redact -c /action/lib/.automation/.gitleaks.toml --verbose --source .]
+::endgroup::
+::group::[32m✅ Linted [GO] files with [golangci-lint] successfully - (52.65s)[0m (expand for details)
+- Using [golangci-lint v2.7.2] https://megalinter.io/9.3.0/descriptors/go_golangci_lint
+- MegaLinter key: [GO_GOLANGCI_LINT]
+- Rules config: [/github/workspace/.golangci.yml]
+- Command: [golangci-lint run --fix -c /github/workspace/.golangci.yml]
+::endgroup::
+[GitHub Comment Reporter] Posted summary as comment on mpeter/dewey #PR1
+[Updated Sources Reporter] copied 5 fixed source files in folder /github/workspace/megalinter-reports/updated_sources.
+
++----SUMMARY----+---------------+---------------+-------+-------+--------+----------+--------------+
+| Descriptor    | Linter        | Mode          | Files | Fixed | Errors | Warnings | Elapsed time |
++---------------+---------------+---------------+-------+-------+--------+----------+--------------+
+| ✅ GO         | golangci-lint | project       |   n/a |   yes |      0 |        0 | 52.65s       |
+| ⚠️ MARKDOWN   | markdownlint  | list_of_files |     7 |     1 |     58 |        0 | 1.75s        |
+| ✅ REPOSITORY | gitleaks      | project       |   n/a |       |      0 |        0 | 2.83s        |
+| ✅ REPOSITORY | git_diff      | project       |   n/a |       |      0 |        0 | 0.31s        |
+| ✅ YAML       | yamllint      | list_of_files |    19 |       |      0 |        0 | 1.14s        |
++---------------+---------------+---------------+-------+-------+--------+----------+--------------+
+
+[MARKDOWN_SUMMARY Reporter] Generated MARKDOWN_SUMMARY report: /github/workspace/megalinter-reports/megalinter-report.md
+[MARKDOWN_SUMMARY Reporter] Also appended to GITHUB_STEP_SUMMARY: /github/file_commands/step_summary_e279d25d-f42a-4305-9a59-bfa9e3efd4a9
+[33m⚠️ Successfully linted all files, but with ignored errors[0m

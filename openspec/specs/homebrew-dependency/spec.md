@@ -3,6 +3,11 @@
 > Synced from: `openspec/changes/fix-ollama-cask-rename/specs/homebrew-dependency.md`
 > Date: 2026-03-28
 
+## Purpose
+
+Ensure Homebrew installs the canonical Ollama dependency and documentation uses
+the same cask name.
+
 ## Requirements
 
 ### Requirement: Homebrew Cask Ollama Dependency

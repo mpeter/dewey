@@ -1,3 +1,8 @@
+## Purpose
+
+Maintain testable decomposition, observable test contracts and enforced quality
+ratchets across Dewey's indexing, server, CLI and navigation components.
+
 ## Requirements
 
 ### Requirement: Decomposed Event Handling
@@ -207,3 +212,8 @@ The project MUST pass all Gaze CI quality gates with headroom. Actual CI thresho
 - GazeCRAPload MUST be <= 34
 
 Post-ratchet-2 actuals: CRAPload=10, GazeCRAPload=33.
+
+#### Scenario: Quality thresholds are enforced
+- **GIVEN** the project is evaluated by the documented Gaze quality gates
+- **WHEN** the quality report is generated
+- **THEN** CRAPload MUST be <= 15 and GazeCRAPload MUST be <= 34
