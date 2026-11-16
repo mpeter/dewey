@@ -172,10 +172,10 @@ avoided unless no pure-Go alternative exists for a critical feature.
   before implementation begins. This ensures every change has a
   planning record, a reviewable intent, and a traceable rationale.
   Exempt from this requirement:
-    - Constitution amendments (governed by the Governance section below)
-    - Trivial fixes: typo corrections, comment-only changes, and
+  - Constitution amendments (governed by the Governance section below)
+  - Trivial fixes: typo corrections, comment-only changes, and
       single-line formatting fixes that do not alter behavior
-    - Emergency hotfixes: critical production bugs where the fix is
+  - Emergency hotfixes: critical production bugs where the fix is
       a single well-understood correction (must be retroactively
       documented)
   When in doubt, use a spec. The cost of an unnecessary spec is
